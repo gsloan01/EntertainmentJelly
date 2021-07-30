@@ -9,6 +9,8 @@ public class FPSPlayer : MonoBehaviour
     public float speed = 4;
     public float mouseSensitivity = 80.0f;
 
+    private float xRotation;
+
     public GameObject headTransform;
 
     CharacterController charController;
@@ -41,7 +43,7 @@ public class FPSPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         MovePlayer();
         MoveCamera();
@@ -63,9 +65,10 @@ public class FPSPlayer : MonoBehaviour
         //Rotate left<->right
         transform.Rotate(new Vector3(0, LookX, 0) * Time.deltaTime);
 
-        //Rotate up and down
-        headTransform.transform.Rotate(new Vector3(LookY, 0, 0) * Time.deltaTime);
+        //Clamp up and down
+        xRotation += (LookY * Time.deltaTime);
+        xRotation = Mathf.Clamp(xRotation, -90, 90);
 
-
+        headTransform.transform.localRotation = Quaternion.Euler(new Vector3(xRotation, 0, 0));
     }
 }
