@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(AudioSource))]
 public class FPSPlayer : MonoBehaviour
 {
 
     public float speed = 4;
     public float mouseSensitivity = 80.0f;
 
+    public float bobbingSpeed = 1f;
+    public float bobbingPeak = .2f;
+    private float bobbingTime = 0;
+
     private float xRotation;
 
     public GameObject headTransform;
+    public GameObject playerCamera;
+    private Vector3 startPosition;
 
     CharacterController charController;
+    AudioSource audio;
 
     public float Move { 
         get { return Input.GetAxis("Vertical"); }
@@ -39,7 +47,11 @@ public class FPSPlayer : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        audio = GetComponent<AudioSource>();
         charController = GetComponent<CharacterController>();
+
+        startPosition = playerCamera.transform.localPosition;
     }
 
     // Update is called once per frame
@@ -47,6 +59,47 @@ public class FPSPlayer : MonoBehaviour
     {
         MovePlayer();
         MoveCamera();
+    }
+
+    private void Update()
+    {
+        ViewBobbing();
+        PlaySounds();
+    }
+
+    private void PlaySounds()
+    {
+        if (Mathf.Abs(Move) > 0.1f || Mathf.Abs(Strafe) > 0.1f)
+        {
+            if (!audio.isPlaying) audio.Play();
+        } else
+        {
+            if (audio.isPlaying) audio.Stop();
+        }
+    }
+
+    private void ViewBobbing()
+    {
+        Debug.Log(startPosition);
+        //Debug.Log(playerCamera.transform.localPosition);
+
+        if (Mathf.Abs(Move) > 0.1f || Mathf.Abs(Strafe) > 0.1f)
+        {
+            bobbingTime += Time.deltaTime * bobbingSpeed;
+            Debug.Log(bobbingTime + ": " + Mathf.Sin(bobbingTime));
+
+            Vector3 bobOffset = new Vector3(0, Mathf.Sin(bobbingTime) * bobbingPeak, 0);
+            
+
+            playerCamera.transform.localPosition = bobOffset + startPosition;
+        } else
+        {
+            bobbingTime = 0;
+
+            Vector3 slowRest = Vector3.Lerp(playerCamera.transform.localPosition, startPosition, Time.deltaTime);
+
+            playerCamera.transform.localPosition = slowRest;
+        }
     }
 
 
