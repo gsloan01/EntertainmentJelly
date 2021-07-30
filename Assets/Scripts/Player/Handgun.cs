@@ -10,6 +10,11 @@ public class Handgun : MonoBehaviour
     //Animator for arm & gun
     Animator animator;
 
+    //Particles & light
+    public ParticleSystem flashParticles;
+    public ParticleSystem sparkParticles;
+    public Light muzzleLight;
+
     //Audio
     AudioSource audio;
     public AudioClip shotClip;
@@ -36,8 +41,6 @@ public class Handgun : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
-
-        
     }
 
     // Update is called once per frame
@@ -63,6 +66,13 @@ public class Handgun : MonoBehaviour
 
             animator.Play("Fire", 0, 0);
 
+            //Play flash
+            StartCoroutine(PlayFlash());
+
+            //Emit Particles
+            flashParticles.Emit(1);
+            sparkParticles.Emit(1);
+
             //Play Sound
             audio.clip = shotClip;
             audio.Play();
@@ -70,6 +80,13 @@ public class Handgun : MonoBehaviour
             //Hitscan
             FireShot();
         }
+    }
+
+    private IEnumerator PlayFlash()
+    {
+        muzzleLight.enabled = true;
+        yield return new WaitForSeconds(.02f);
+        muzzleLight.enabled = false;
     }
 
     private void FireShot()
