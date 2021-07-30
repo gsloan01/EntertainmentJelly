@@ -10,6 +10,9 @@ public class EnemyMovement : MonoBehaviour
     public FPSPlayer currentTarget;
     public LayerMask detectionLayer;
     Rigidbody rigidbody;
+    Animator animator;
+
+    public float speed = 2f;
 
     public float distanceFromTarget;
     public float stoppingDistance = 1f;
@@ -21,6 +24,7 @@ public class EnemyMovement : MonoBehaviour
         enemyManager = GetComponent<EnemyManager>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         rigidbody = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -75,10 +79,12 @@ public class EnemyMovement : MonoBehaviour
         {
             if (distanceFromTarget > stoppingDistance)
             {
+                animator.SetFloat("Speed", speed);
                 navMeshAgent.enabled = true;
             }
             else if(distanceFromTarget <= stoppingDistance)
             {
+                animator.SetFloat("Speed", 0);
                 navMeshAgent.enabled = false;
             }
         }
