@@ -758,11 +758,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4523690870132846}
-  - component: {fileID: 54975388688484538}
   - component: {fileID: 136351756376160448}
   - component: {fileID: 82766377412988528}
   - component: {fileID: -7961825539774584023}
-  - component: {fileID: -3564893055559867496}
   - component: {fileID: 5801176956233556098}
   m_Layer: 8
   m_Name: Player
@@ -778,7 +776,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273765395313544}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -786,22 +784,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54975388688484538
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273765395313544}
-  serializedVersion: 2
-  m_Mass: 5
-  m_Drag: 1
-  m_AngularDrag: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!136 &136351756376160448
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -925,23 +907,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  mouseSensitivity: 80
-  headTransform: {fileID: 0}
---- !u!114 &-3564893055559867496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273765395313544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f2c8ce49488eff41a921837abc3e218, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  mouseSensitivity: 80
-  headTransform: {fileID: 0}
+  mouseSensitivity: 100
+  headTransform: {fileID: 1627863436047044}
 --- !u!143 &5801176956233556098
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6941,7 +6908,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: b0ea9aa64da8c76498ef3b008d0cca1b, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12622,6 +12588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4888130831839222}
   - component: {fileID: 95818705220738010}
+  - component: {fileID: 2296178197786201691}
   - component: {fileID: 114919995911110234}
   - component: {fileID: 82643139687027346}
   - component: {fileID: 82168095860958118}
@@ -12667,6 +12634,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2296178197786201691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986869707440648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d5f25eb6bb13844dbec46eb15dd3f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 20338765399721042}
+  clipSize: 8
+  ammo: 8
+  hitFX: {fileID: 1581837966267975483, guid: a141a615545c85f4bb471ddb49d8e61c, type: 3}
 --- !u!114 &114919995911110234
 MonoBehaviour:
   m_ObjectHideFlags: 0
