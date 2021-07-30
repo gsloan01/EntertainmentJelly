@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: ac711023d9bb44482afd2af9cecbfe28
+timeCreated: 1482325359
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: divider_rounded
+    100002: divider_sharp
+    100004: //RootNode
+    100006: floor1
+    100008: floor2
+    100010: floor3
+    100012: floor4
+    100014: pipe_back
+    100016: pipe_front
+    100018: pipe_wheel
+    100020: tank
+    100022: tube_bulky
+    100024: tube_plain
+    100026: wall_inner
+    100028: wall_outer
+    100030: wall_single
+    400000: divider_rounded
+    400002: divider_sharp
+    400004: //RootNode
+    400006: floor1
+    400008: floor2
+    400010: floor3
+    400012: floor4
+    400014: pipe_back
+    400016: pipe_front
+    400018: pipe_wheel
+    400020: tank
+    400022: tube_bulky
+    400024: tube_plain
+    400026: wall_inner
+    400028: wall_outer
+    400030: wall_single
+    2300000: divider_rounded
+    2300002: divider_sharp
+    2300004: floor1
+    2300006: floor2
+    2300008: floor3
+    2300010: floor4
+    2300012: pipe_back
+    2300014: pipe_front
+    2300016: pipe_wheel
+    2300018: tank
+    2300020: tube_bulky
+    2300022: tube_plain
+    2300024: wall_inner
+    2300026: wall_outer
+    2300028: wall_single
+    3300000: divider_rounded
+    3300002: divider_sharp
+    3300004: floor1
+    3300006: floor2
+    3300008: floor3
+    3300010: floor4
+    3300012: pipe_back
+    3300014: pipe_front
+    3300016: pipe_wheel
+    3300018: tank
+    3300020: tube_bulky
+    3300022: tube_plain
+    3300024: wall_inner
+    3300026: wall_outer
+    3300028: wall_single
+    4300000: pipe_back
+    4300002: pipe_wheel
+    4300004: pipe_front
+    4300006: tank
+    4300008: tube_plain
+    4300010: tube_bulky
+    4300012: divider_rounded
+    4300014: divider_sharp
+    4300016: wall_single
+    4300018: wall_outer
+    4300020: wall_inner
+    4300022: floor2
+    4300024: floor1
+    4300026: floor3
+    4300028: floor4
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 2000
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

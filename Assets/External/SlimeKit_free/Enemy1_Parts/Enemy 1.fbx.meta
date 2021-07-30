@@ -1,0 +1,1429 @@
+fileFormatVersion: 2
+guid: b917c919e167e4faeb83eeff367a2e4a
+timeCreated: 1482313882
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: _enemy1_MESH_lowres_soft:enemy1_mesh
+    100002: e1_arm_l_1
+    100004: e1_arm_l_2
+    100006: e1_arm_l_3
+    100008: e1_arm_l_4
+    100010: e1_arm_l_5
+    100012: e1_arm_l_6
+    100014: e1_arm_l_7
+    100016: e1_arm_r_1
+    100018: e1_arm_r_2
+    100020: e1_arm_r_3
+    100022: e1_arm_r_4
+    100024: e1_arm_r_5
+    100026: e1_arm_r_6
+    100028: e1_arm_r_7
+    100030: e1_bod_all_1
+    100032: e1_bod_cent_1
+    100034: e1_bod_cent_2
+    100036: e1_bod_cent_3
+    100038: e1_bod_cent_4
+    100040: e1_bod_centback_1
+    100042: e1_bod_centback_2
+    100044: e1_bod_centback_3
+    100046: e1_bod_l_back_1
+    100048: e1_bod_l_back_2
+    100050: e1_bod_l_forw_1
+    100052: e1_bod_l_forw_2
+    100054: e1_bod_l_forw_3
+    100056: e1_bod_l_side_1
+    100058: e1_bod_l_side_2
+    100060: e1_bod_l_side_3
+    100062: e1_bod_r_back_1
+    100064: e1_bod_r_back_2
+    100066: e1_bod_r_forw_1
+    100068: e1_bod_r_forw_2
+    100070: e1_bod_r_forw_3
+    100072: e1_bod_r_side_1
+    100074: e1_bod_r_side_2
+    100076: e1_bod_r_side_3
+    100078: e1_hand_l_fing_clo_1
+    100080: e1_hand_l_fing_clo_2
+    100082: e1_hand_l_fing_clo_3
+    100084: e1_hand_l_fing_far_1
+    100086: e1_hand_l_fing_far_2
+    100088: e1_hand_l_fing_far_4
+    100090: e1_hand_l_fing_mid_1
+    100092: e1_hand_l_fing_mid_2
+    100094: e1_hand_l_fing_mid_3
+    100096: e1_hand_r_fing_clo_1
+    100098: e1_hand_r_fing_clo_2
+    100100: e1_hand_r_fing_clo_3
+    100102: e1_hand_r_fing_far_1
+    100104: e1_hand_r_fing_far_2
+    100106: e1_hand_r_fing_far_4
+    100108: e1_hand_r_fing_mid_1
+    100110: e1_hand_r_fing_mid_2
+    100112: e1_hand_r_fing_mid_3
+    100114: e1_jaw_bo_1
+    100116: e1_jaw_hi_1
+    100118: e1_jaw_hi_2
+    100120: e1_jaw_lo_1
+    100122: e1_jaw_lo_2
+    100124: e1_skull_1
+    100126: e1_skull_2
+    100128: e1_skull_3
+    100130: e1_skull_4
+    100132: e1_spine_1
+    100134: e1_spine_2
+    100136: e1_spine_3
+    100138: e1_spine_4
+    100140: //RootNode
+    100142: enemy1_COG
+    400000: _enemy1_MESH_lowres_soft:enemy1_mesh
+    400002: e1_arm_l_1
+    400004: e1_arm_l_2
+    400006: e1_arm_l_3
+    400008: e1_arm_l_4
+    400010: e1_arm_l_5
+    400012: e1_arm_l_6
+    400014: e1_arm_l_7
+    400016: e1_arm_r_1
+    400018: e1_arm_r_2
+    400020: e1_arm_r_3
+    400022: e1_arm_r_4
+    400024: e1_arm_r_5
+    400026: e1_arm_r_6
+    400028: e1_arm_r_7
+    400030: e1_bod_all_1
+    400032: e1_bod_cent_1
+    400034: e1_bod_cent_2
+    400036: e1_bod_cent_3
+    400038: e1_bod_cent_4
+    400040: e1_bod_centback_1
+    400042: e1_bod_centback_2
+    400044: e1_bod_centback_3
+    400046: e1_bod_l_back_1
+    400048: e1_bod_l_back_2
+    400050: e1_bod_l_forw_1
+    400052: e1_bod_l_forw_2
+    400054: e1_bod_l_forw_3
+    400056: e1_bod_l_side_1
+    400058: e1_bod_l_side_2
+    400060: e1_bod_l_side_3
+    400062: e1_bod_r_back_1
+    400064: e1_bod_r_back_2
+    400066: e1_bod_r_forw_1
+    400068: e1_bod_r_forw_2
+    400070: e1_bod_r_forw_3
+    400072: e1_bod_r_side_1
+    400074: e1_bod_r_side_2
+    400076: e1_bod_r_side_3
+    400078: e1_hand_l_fing_clo_1
+    400080: e1_hand_l_fing_clo_2
+    400082: e1_hand_l_fing_clo_3
+    400084: e1_hand_l_fing_far_1
+    400086: e1_hand_l_fing_far_2
+    400088: e1_hand_l_fing_far_4
+    400090: e1_hand_l_fing_mid_1
+    400092: e1_hand_l_fing_mid_2
+    400094: e1_hand_l_fing_mid_3
+    400096: e1_hand_r_fing_clo_1
+    400098: e1_hand_r_fing_clo_2
+    400100: e1_hand_r_fing_clo_3
+    400102: e1_hand_r_fing_far_1
+    400104: e1_hand_r_fing_far_2
+    400106: e1_hand_r_fing_far_4
+    400108: e1_hand_r_fing_mid_1
+    400110: e1_hand_r_fing_mid_2
+    400112: e1_hand_r_fing_mid_3
+    400114: e1_jaw_bo_1
+    400116: e1_jaw_hi_1
+    400118: e1_jaw_hi_2
+    400120: e1_jaw_lo_1
+    400122: e1_jaw_lo_2
+    400124: e1_skull_1
+    400126: e1_skull_2
+    400128: e1_skull_3
+    400130: e1_skull_4
+    400132: e1_spine_1
+    400134: e1_spine_2
+    400136: e1_spine_3
+    400138: e1_spine_4
+    400140: //RootNode
+    400142: enemy1_COG
+    4300000: _enemy1_MESH_lowres_soft:enemy1_mesh
+    7400000: turn
+    7400002: idle
+    7400004: moving
+    7400006: bite
+    7400008: hit
+    7400010: death
+    7400012: throw
+    9500000: //RootNode
+    13700000: _enemy1_MESH_lowres_soft:enemy1_mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: turn
+      takeName: Take 001
+      firstFrame: 331
+      lastFrame: 360
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _enemy1_MESH_lowres_soft:enemy1_mesh
+        weight: 1
+      - path: enemy1_COG
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3/e1_bod_cent_4
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2/e1_bod_centback_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1/e1_bod_l_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2/e1_bod_l_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2/e1_bod_l_side_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1/e1_bod_r_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2/e1_bod_r_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2/e1_bod_r_side_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2/e1_hand_l_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2/e1_hand_l_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2/e1_hand_l_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2/e1_hand_r_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2/e1_hand_r_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2/e1_hand_r_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1/e1_jaw_hi_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1/e1_jaw_lo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3/e1_skull_4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 159
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _enemy1_MESH_lowres_soft:enemy1_mesh
+        weight: 1
+      - path: enemy1_COG
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3/e1_bod_cent_4
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2/e1_bod_centback_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1/e1_bod_l_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2/e1_bod_l_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2/e1_bod_l_side_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1/e1_bod_r_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2/e1_bod_r_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2/e1_bod_r_side_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2/e1_hand_l_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2/e1_hand_l_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2/e1_hand_l_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2/e1_hand_r_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2/e1_hand_r_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2/e1_hand_r_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1/e1_jaw_hi_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1/e1_jaw_lo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3/e1_skull_4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: moving
+      takeName: Take 001
+      firstFrame: 160
+      lastFrame: 209
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _enemy1_MESH_lowres_soft:enemy1_mesh
+        weight: 1
+      - path: enemy1_COG
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3/e1_bod_cent_4
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2/e1_bod_centback_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1/e1_bod_l_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2/e1_bod_l_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2/e1_bod_l_side_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1/e1_bod_r_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2/e1_bod_r_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2/e1_bod_r_side_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2/e1_hand_l_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2/e1_hand_l_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2/e1_hand_l_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2/e1_hand_r_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2/e1_hand_r_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2/e1_hand_r_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1/e1_jaw_hi_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1/e1_jaw_lo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3/e1_skull_4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: bite
+      takeName: Take 001
+      firstFrame: 210
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _enemy1_MESH_lowres_soft:enemy1_mesh
+        weight: 1
+      - path: enemy1_COG
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3/e1_bod_cent_4
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2/e1_bod_centback_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1/e1_bod_l_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2/e1_bod_l_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2/e1_bod_l_side_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1/e1_bod_r_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2/e1_bod_r_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2/e1_bod_r_side_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2/e1_hand_l_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2/e1_hand_l_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2/e1_hand_l_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2/e1_hand_r_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2/e1_hand_r_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2/e1_hand_r_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1/e1_jaw_hi_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1/e1_jaw_lo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3/e1_skull_4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: hit
+      takeName: Take 001
+      firstFrame: 241
+      lastFrame: 260
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _enemy1_MESH_lowres_soft:enemy1_mesh
+        weight: 1
+      - path: enemy1_COG
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3/e1_bod_cent_4
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2/e1_bod_centback_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1/e1_bod_l_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2/e1_bod_l_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2/e1_bod_l_side_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1/e1_bod_r_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2/e1_bod_r_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2/e1_bod_r_side_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2/e1_hand_l_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2/e1_hand_l_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2/e1_hand_l_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2/e1_hand_r_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2/e1_hand_r_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2/e1_hand_r_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1/e1_jaw_hi_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1/e1_jaw_lo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3/e1_skull_4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      firstFrame: 261
+      lastFrame: 290
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _enemy1_MESH_lowres_soft:enemy1_mesh
+        weight: 1
+      - path: enemy1_COG
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3/e1_bod_cent_4
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2/e1_bod_centback_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1/e1_bod_l_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2/e1_bod_l_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2/e1_bod_l_side_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1/e1_bod_r_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2/e1_bod_r_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2/e1_bod_r_side_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2/e1_hand_l_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2/e1_hand_l_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2/e1_hand_l_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2/e1_hand_r_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2/e1_hand_r_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2/e1_hand_r_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1/e1_jaw_hi_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1/e1_jaw_lo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3/e1_skull_4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: throw
+      takeName: Take 001
+      firstFrame: 291
+      lastFrame: 329
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: _enemy1_MESH_lowres_soft:enemy1_mesh
+        weight: 1
+      - path: enemy1_COG
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_cent_1/e1_bod_cent_2/e1_bod_cent_3/e1_bod_cent_4
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_centback_1/e1_bod_centback_2/e1_bod_centback_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_back_1/e1_bod_l_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_forw_1/e1_bod_l_forw_2/e1_bod_l_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_l_side_1/e1_bod_l_side_2/e1_bod_l_side_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_back_1/e1_bod_r_back_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_forw_1/e1_bod_r_forw_2/e1_bod_r_forw_3
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2
+        weight: 1
+      - path: enemy1_COG/e1_bod_all_1/e1_bod_r_side_1/e1_bod_r_side_2/e1_bod_r_side_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_clo_1/e1_hand_l_fing_clo_2/e1_hand_l_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_far_1/e1_hand_l_fing_far_2/e1_hand_l_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_l_1/e1_arm_l_2/e1_arm_l_3/e1_arm_l_4/e1_arm_l_5/e1_arm_l_6/e1_arm_l_7/e1_hand_l_fing_mid_1/e1_hand_l_fing_mid_2/e1_hand_l_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_clo_1/e1_hand_r_fing_clo_2/e1_hand_r_fing_clo_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_far_1/e1_hand_r_fing_far_2/e1_hand_r_fing_far_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_arm_r_1/e1_arm_r_2/e1_arm_r_3/e1_arm_r_4/e1_arm_r_5/e1_arm_r_6/e1_arm_r_7/e1_hand_r_fing_mid_1/e1_hand_r_fing_mid_2/e1_hand_r_fing_mid_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_hi_1/e1_jaw_hi_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_jaw_bo_1/e1_jaw_lo_1/e1_jaw_lo_2
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3
+        weight: 1
+      - path: enemy1_COG/e1_spine_1/e1_spine_2/e1_spine_3/e1_spine_4/e1_skull_1/e1_skull_2/e1_skull_3/e1_skull_4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
