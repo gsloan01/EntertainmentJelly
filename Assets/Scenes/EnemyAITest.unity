@@ -1746,7 +1746,7 @@ Animator:
   m_GameObject: {fileID: 1473335979}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: be742b6581405c244b53d89dcc8787dc, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0bc180a1a4f95f14f80ade97d9461bb5, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2159,6 +2159,7 @@ MonoBehaviour:
   detectionLayer:
     serializedVersion: 2
     m_Bits: 64
+  speed: 2
   distanceFromTarget: 0
   stoppingDistance: 1
   rotationSpeed: 25
