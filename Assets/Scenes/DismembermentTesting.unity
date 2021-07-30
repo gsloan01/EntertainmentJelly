@@ -320,6 +320,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 493904, guid: d3b73ae4ef52a734fac3011410d9bcc8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98353475
+      objectReference: {fileID: 0}
+    - target: {fileID: 493904, guid: d3b73ae4ef52a734fac3011410d9bcc8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.18071643
+      objectReference: {fileID: 0}
+    - target: {fileID: 493904, guid: d3b73ae4ef52a734fac3011410d9bcc8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00017190615
+      objectReference: {fileID: 0}
+    - target: {fileID: 493904, guid: d3b73ae4ef52a734fac3011410d9bcc8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0009355856
+      objectReference: {fileID: 0}
+    - target: {fileID: 493904, guid: d3b73ae4ef52a734fac3011410d9bcc8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 20.823
+      objectReference: {fileID: 0}
+    - target: {fileID: 493904, guid: d3b73ae4ef52a734fac3011410d9bcc8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.109
+      objectReference: {fileID: 0}
     - target: {fileID: 9567098, guid: d3b73ae4ef52a734fac3011410d9bcc8, type: 3}
       propertyPath: m_Controller
       value: 
@@ -475,8 +499,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.08082721
-  m_Center: {x: 0, y: 0.08082721, z: 0}
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0.075, z: 0}
 --- !u!144 &883498549
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -500,7 +524,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 0
+    limit: -23.52353
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
@@ -565,7 +589,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.076864295
+  m_Radius: 0.075
   m_Height: 0.38432145
   m_Direction: 1
   m_Center: {x: 0, y: -0.19216073, z: 0}
@@ -625,7 +649,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.09180412
+  m_Radius: 0.05
   m_Height: 0.36721647
   m_Direction: 1
   m_Center: {x: 0, y: -0.18360823, z: 0}
@@ -717,7 +741,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.08348288
+  m_Radius: 0.075
   m_Height: 0.41741437
   m_Direction: 1
   m_Center: {x: 0, y: 0.20870718, z: 0}
@@ -777,7 +801,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.08790677
+  m_Radius: 0.05
   m_Height: 0.35162708
   m_Direction: 1
   m_Center: {x: 0, y: 0.17581354, z: 0}
@@ -854,8 +878,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.21293882, y: 0.22591518, z: 0.2600407}
-  m_Center: {x: -0.024588436, y: 0.11295747, z: -0.000000029802322}
+  m_Size: {x: 0.18, y: 0.22591518, z: 0.2600407}
+  m_Center: {x: -0.01, y: 0.11295747, z: 0}
 --- !u!144 &883498564
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -944,10 +968,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.12649308
+  m_Radius: 0.075
   m_Height: 0.5059723
   m_Direction: 1
-  m_Center: {x: 0, y: -0.25298616, z: 0}
+  m_Center: {x: -0.02, y: -0.25298616, z: 0}
 --- !u!144 &883498568
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1004,10 +1028,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.13112411
+  m_Radius: 0.075
   m_Height: 0.43708035
   m_Direction: 1
-  m_Center: {x: 0, y: -0.21854018, z: 0}
+  m_Center: {x: 0.03, y: -0.21854018, z: 0}
 --- !u!144 &883498570
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1096,10 +1120,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.12649302
+  m_Radius: 0.075
   m_Height: 0.5059721
   m_Direction: 1
-  m_Center: {x: 0, y: 0.25298604, z: 0}
+  m_Center: {x: 0.03, y: 0.25298604, z: 0}
 --- !u!144 &883498574
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1156,10 +1180,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.13113289
+  m_Radius: 0.075
   m_Height: 0.43710962
   m_Direction: 1
-  m_Center: {x: 0, y: 0.21855481, z: 0}
+  m_Center: {x: -0.03, y: 0.21855481, z: 0}
 --- !u!65 &883498576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1171,8 +1195,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.21301994, y: 0.20250005, z: 0.2600407}
-  m_Center: {x: -0.010549627, y: 0.016029015, z: -0.000000029802322}
+  m_Size: {x: 0.15, y: 0.2, z: 0.22}
+  m_Center: {x: 0.045, y: -0.07, z: 0}
 --- !u!1 &1305799690
 GameObject:
   m_ObjectHideFlags: 0
