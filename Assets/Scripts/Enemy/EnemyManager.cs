@@ -39,6 +39,10 @@ public class EnemyManager : MonoBehaviour
     {
     }
 
+    public void TurnOff()
+    {
+        this.enabled = false;
+    }
     private void HandleCurrentAction()
     {
         if (enemyMovement.currentTarget == null)
