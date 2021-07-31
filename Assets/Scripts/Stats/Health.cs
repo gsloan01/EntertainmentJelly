@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
 
     public Health parentHealth;
     public bool parentAddHealth;
+
+    private bool hasDied = false;
     
 
     public UnityEvent deathEvent;
@@ -32,12 +34,13 @@ public class Health : MonoBehaviour
     public void SubtractHealth(float minus)
     {
         currentHealth -= minus;
-        parentHealth.SubtractHealth(minus);
+        parentHealth?.SubtractHealth(minus);
     }
 
     public void FullHeal()
     {
         currentHealth = maxHealth;
+        hasDied = false;
     }
 
     public void Kill()
@@ -47,9 +50,15 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !hasDied)
         {
             deathEvent?.Invoke();
+            hasDied = true;
         }
+    }
+
+    public void PlayerDeath()
+    {
+        Debug.Log("Player Killed");
     }
 }
