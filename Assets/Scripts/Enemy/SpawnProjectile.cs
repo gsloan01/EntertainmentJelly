@@ -10,12 +10,15 @@ public class SpawnProjectile : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
-
-        rigidbody.AddForce(transform.forward * speed, ForceMode.Impulse);
     }
 
     void Update()
     {
         
+    }
+
+    public void StartThrow(Vector3 direction)
+    {
+        rigidbody.AddForce(direction * speed, ForceMode.Impulse);
     }
 }
