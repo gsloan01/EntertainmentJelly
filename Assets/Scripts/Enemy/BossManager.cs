@@ -6,6 +6,7 @@ public class BossManager : MonoBehaviour
 {
     public SpawnEnemies[] spawns;
     public GameObject projectile;
+    public GameObject rotationPoint;
     Animator animator;
     List<SpawnEnemies> usedSpawns = new List<SpawnEnemies>();
 
@@ -13,6 +14,8 @@ public class BossManager : MonoBehaviour
 
     int randomSpawn = 0;
     int enemiesSpawned = 0;
+
+    float moveTimer = 0;
 
     float timer = 5f;
     float phaseTimer = 20f;
@@ -71,14 +74,14 @@ public class BossManager : MonoBehaviour
                 {
                     enemiesSpawned = 0;
                     usedSpawns.Clear();
-                    int randomState = Random.Range(0, 2);
+                    int randomState = Random.Range(1, 2);
                     if (randomState == 0)
                     {
                         bStates = BossStates.Offense;
                     }
                     else
                     {
-                        //bStates = BossStates.Dodge;
+                        bStates = BossStates.Dodge;
                     }
                 }
                 break;
@@ -95,23 +98,23 @@ public class BossManager : MonoBehaviour
                 if (phaseTimer <= 0)
                 {
                     Debug.Log("PhaseTimer is 0");
-                    int randomState2 = Random.Range(0, 1);
+                    int randomState2 = Random.Range(0, 2);
                     if (randomState2 == 0)
                     {
                         bStates = BossStates.Cooldown;
                         finishedSpawning = false;
                         timer = enemySpawnRate;
                         usedSpawns.Clear();
-                        Debug.Log("Should be cooldown");
                     }
                     else
                     {
-                        //bStates = BossStates.Dodge;
-                        Debug.Log("Should be dodge");
+                        bStates = BossStates.Dodge;
                     }
                 }
                 break;
             case BossStates.Dodge:
+                moveTimer += Time.deltaTime;
+                transform.RotateAround(rotationPoint.transform.position, Vector3.up, 10 * Time.deltaTime);
                 break;
             case BossStates.Death:
                 break;
