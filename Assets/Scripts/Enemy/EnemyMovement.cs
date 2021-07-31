@@ -34,6 +34,11 @@ public class EnemyMovement : MonoBehaviour
         rigidbody.isKinematic = false;
     }
 
+    public void TurnOff()
+    {
+        this.enabled = false;
+    }
+
     public void HandleDetection()
     {
         //Create list of colliders
