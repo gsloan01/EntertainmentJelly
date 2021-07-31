@@ -23,16 +23,15 @@ public class Limb : MonoBehaviour
         {
             if (childLimbs.Length > 0)
             {
-                foreach(Limb limb in childLimbs)
+                for(int i = 0; i < childLimbs.Length; i++)
                 {
-                    limb?.GetHit();
+                    if (childLimbs[i] != null) childLimbs[i].GetHit();
                 }
             }
 
             transform.localScale = Vector3.zero;
-            GetComponent<Collider>().enabled = false;
+            Debug.Log(name + " is trying to destroy itself");
             Destroy(this);
-            Debug.Log(name + "is trying to destroy itself");
         }
     }
 }
