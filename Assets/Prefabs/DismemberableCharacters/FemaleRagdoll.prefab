@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  parentHealth: {fileID: 0}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -307,6 +309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  parentHealth: {fileID: 1579160528459050665}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -314,18 +318,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Limb, Assembly-CSharp
         m_MethodName: Break
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1579160528459050665}
-        m_TargetAssemblyTypeName: Health, Assembly-CSharp
-        m_MethodName: SubtractHealth
-        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -422,21 +414,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  parentHealth: {fileID: 1579160528459050665}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1579160528459050665}
-        m_TargetAssemblyTypeName: Health, Assembly-CSharp
-        m_MethodName: SubtractHealth
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 10
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!54 &1179066705173777940
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -546,6 +528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 4
+  parentHealth: {fileID: 0}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -682,6 +666,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 4
+  parentHealth: {fileID: 0}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -817,6 +803,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+  parentHealth: {fileID: 0}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -952,6 +940,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+  parentHealth: {fileID: 0}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1086,10 +1076,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 10
+  parentHealth: {fileID: 1579160528459050665}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1179066705173778018}
+        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &1179066705173777929
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1197,10 +1201,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 10
+  parentHealth: {fileID: 1579160528459050665}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1179066705173778028}
+        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &1179066705173777926
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1309,10 +1327,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
+  maxHealth: 10
+  parentHealth: {fileID: 1579160528459050665}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1179066705173778019}
+        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &1179066705173777934
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1421,10 +1453,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
+  maxHealth: 10
+  parentHealth: {fileID: 1579160528459050665}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1179066705173778029}
+        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1179066705173777968
 PrefabInstance:
   m_ObjectHideFlags: 0
