@@ -65,6 +65,7 @@ public class DismemberMaster : MonoBehaviour
                 if (bloodSpurtOverride != null) limb.bloodSpurt = bloodSpurtOverride;
                 if (secondaryEffectOverride != null) limb.secondaryEffect = secondaryEffectOverride;
                 if (audioSourceOverride != null) limb.audioSource = audioSourceOverride;
+                //limb.destroyable = false;
             }
             
         }

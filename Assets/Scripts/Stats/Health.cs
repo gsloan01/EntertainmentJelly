@@ -6,13 +6,18 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     public float maxHealth;
-    private float currentHealth;
+    private float currentHealth = 1;
 
     public Health parentHealth;
     public bool parentAddHealth;
     
 
     public UnityEvent deathEvent;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
 
     public void AddHealth(float add)
     {

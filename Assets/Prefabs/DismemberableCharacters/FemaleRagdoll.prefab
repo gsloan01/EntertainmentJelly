@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1179066705613794173}
+  - component: {fileID: 1579160528459050665}
   m_Layer: 0
   m_Name: FemaleRagdoll
   m_TagString: Untagged
@@ -31,6 +32,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1579160528459050665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179066705613794172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1179066705051633662}
+        m_TargetAssemblyTypeName: DismemberMaster, Assembly-CSharp
+        m_MethodName: DeathEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &9206646554464855439
 AudioSource:
   m_ObjectHideFlags: 0
@@ -265,6 +294,46 @@ MonoBehaviour:
   bloodSpurt: {fileID: 8345186492862333779, guid: 037679bdb1af78444b7cecc90f413942, type: 3}
   secondaryEffect: {fileID: 0}
   audioSource: {fileID: 0}
+--- !u!114 &6686260849501208900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832894432874517794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1179066705173778017}
+        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1579160528459050665}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: SubtractHealth
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &1179066705173777942
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -340,6 +409,34 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4622266559052590365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832894432874517852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1579160528459050665}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: SubtractHealth
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &1179066705173777940
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -436,6 +533,46 @@ MonoBehaviour:
   bloodSpurt: {fileID: 8345186492862333779, guid: 037679bdb1af78444b7cecc90f413942, type: 3}
   secondaryEffect: {fileID: 0}
   audioSource: {fileID: 0}
+--- !u!114 &5412583046282157820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212547311615420492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 4
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1179066705173778022}
+        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1579160528459050665}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: SubtractHealth
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 3
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &1179066705173777949
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -532,6 +669,46 @@ MonoBehaviour:
   bloodSpurt: {fileID: 8345186492862333779, guid: 037679bdb1af78444b7cecc90f413942, type: 3}
   secondaryEffect: {fileID: 0}
   audioSource: {fileID: 0}
+--- !u!114 &5319699666010516776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212547311615420494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 4
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1179066705173778016}
+        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1579160528459050665}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: SubtractHealth
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 3
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &1179066705173777938
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -627,6 +804,46 @@ MonoBehaviour:
   bloodSpurt: {fileID: 6173109535201584932, guid: d7a13cd1668f7884cb443eaa3b641620, type: 3}
   secondaryEffect: {fileID: 0}
   audioSource: {fileID: 0}
+--- !u!114 &3472746942626631495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212547311615420560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1179066705173778021}
+        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1579160528459050665}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: SubtractHealth
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &1179066705173777944
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -722,6 +939,46 @@ MonoBehaviour:
   bloodSpurt: {fileID: 6173109535201584932, guid: d7a13cd1668f7884cb443eaa3b641620, type: 3}
   secondaryEffect: {fileID: 0}
   audioSource: {fileID: 0}
+--- !u!114 &9096502198166340333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212547311615420562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1179066705173778023}
+        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1579160528459050665}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: SubtractHealth
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &1179066705173777923
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -817,6 +1074,22 @@ MonoBehaviour:
   bloodSpurt: {fileID: 6173109535201584932, guid: d7a13cd1668f7884cb443eaa3b641620, type: 3}
   secondaryEffect: {fileID: 0}
   audioSource: {fileID: 0}
+--- !u!114 &8980805477059711709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212547311615420584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &1179066705173777929
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -912,6 +1185,22 @@ MonoBehaviour:
   bloodSpurt: {fileID: 6173109535201584932, guid: d7a13cd1668f7884cb443eaa3b641620, type: 3}
   secondaryEffect: {fileID: 0}
   audioSource: {fileID: 0}
+--- !u!114 &6146437225679743015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212547311615420586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &1179066705173777926
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1008,6 +1297,22 @@ MonoBehaviour:
   bloodSpurt: {fileID: 8345186492862333779, guid: 037679bdb1af78444b7cecc90f413942, type: 3}
   secondaryEffect: {fileID: 0}
   audioSource: {fileID: 0}
+--- !u!114 &1304602454146443907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212547311615420592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 4
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &1179066705173777934
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1104,6 +1409,22 @@ MonoBehaviour:
   bloodSpurt: {fileID: 8345186492862333779, guid: 037679bdb1af78444b7cecc90f413942, type: 3}
   secondaryEffect: {fileID: 0}
   audioSource: {fileID: 0}
+--- !u!114 &6027898117770945543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212547311615420594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 4
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1179066705173777968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1169,19 +1490,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
---- !u!1 &8212547311615420494 stripped
+--- !u!1 &8212547311615420592 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7035808645148485246, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7035808645148485248, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
   m_PrefabInstance: {fileID: 1179066705173777968}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2832894432874517794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3966708725887359762, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
-  m_PrefabInstance: {fileID: 1179066705173777968}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8212547311615420592 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7035808645148485248, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
   m_PrefabInstance: {fileID: 1179066705173777968}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2832894432874517852 stripped
@@ -1199,9 +1515,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3966708725887190838, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
   m_PrefabInstance: {fileID: 1179066705173777968}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8212547311615420594 stripped
+--- !u!1 &8212547311615420586 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7035808645148485250, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7035808645148485274, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
   m_PrefabInstance: {fileID: 1179066705173777968}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8212547311615420584 stripped
@@ -1209,14 +1525,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7035808645148485272, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
   m_PrefabInstance: {fileID: 1179066705173777968}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8212547311615420594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7035808645148485250, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
+  m_PrefabInstance: {fileID: 1179066705173777968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8212547311615420562 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7035808645148485282, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
+  m_PrefabInstance: {fileID: 1179066705173777968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8212547311615420560 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7035808645148485280, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
-  m_PrefabInstance: {fileID: 1179066705173777968}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8212547311615420586 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7035808645148485274, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
   m_PrefabInstance: {fileID: 1179066705173777968}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8212547311615420492 stripped
@@ -1224,9 +1545,9 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7035808645148485244, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
   m_PrefabInstance: {fileID: 1179066705173777968}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8212547311615420562 stripped
+--- !u!1 &8212547311615420494 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7035808645148485282, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7035808645148485246, guid: ef692d625a130534ab152b65fe91a77b, type: 3}
   m_PrefabInstance: {fileID: 1179066705173777968}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2832894432874517734 stripped
