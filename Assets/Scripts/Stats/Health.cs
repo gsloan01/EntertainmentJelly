@@ -7,18 +7,32 @@ public class Health : MonoBehaviour
 {
     public float maxHealth;
     private float currentHealth = 1;
+    public bool hasRegen = false;
+    public float regenTime = 2.0f;
+    private float currentRegTime;
+    public float regenAmount = 1.0f;
 
     public Health parentHealth;
     public bool parentAddHealth;
 
-    private bool hasDied = false;
-    
+
+    public bool hasDied = false;
+
 
     public UnityEvent deathEvent;
+
+    public float subEventThreshold = 1f;
+    public UnityEvent subtractEvent;
+
 
     void Start()
     {
         currentHealth = maxHealth;
+    }
+
+    public bool HasDied()
+    {
+        return hasDied;
     }
 
     public void AddHealth(float add)
@@ -31,10 +45,18 @@ public class Health : MonoBehaviour
         currentHealth = Mathf.Min(maxHealth, value);
     }
 
+    public float GetHealth() {
+        return currentHealth;
+    }
     public void SubtractHealth(float minus)
     {
         currentHealth -= minus;
         parentHealth?.SubtractHealth(minus);
+
+        if (minus >= subEventThreshold)
+        {
+            subtractEvent?.Invoke();
+        }
     }
 
     public void FullHeal()
@@ -50,6 +72,15 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
+        currentRegTime += Time.deltaTime;
+
+        if (currentRegTime > regenTime && hasRegen)
+        {
+            AddHealth(regenAmount);
+            currentRegTime = 0;
+        }
+
+
         if (currentHealth <= 0 && !hasDied)
         {
             deathEvent?.Invoke();

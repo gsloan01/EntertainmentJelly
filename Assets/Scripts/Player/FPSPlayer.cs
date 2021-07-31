@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(AudioSource))]
@@ -54,11 +55,13 @@ public class FPSPlayer : MonoBehaviour
     public GameObject headTransform;
     public GameObject swivelObject;
     public GameObject playerCamera;
+    public Image damageImage;
     private Vector3 camPosition;
     private Vector3 headPosition;
 
-    CharacterController charController;
-    AudioSource audio;
+    private Health playerHealth;
+    private CharacterController charController;
+    private AudioSource audio;
     public List<AudioClip> steps = new List<AudioClip>();
 
     private static FPSPlayer instance;
@@ -78,16 +81,19 @@ public class FPSPlayer : MonoBehaviour
 
     public float LookX
     {
-        get { return Input.GetAxis("Mouse X") * mouseSensitivity; }
+        get { return (Input.GetAxis("Mouse X") + staggerView.x) * mouseSensitivity; }
     }
 
     public float LookY
     {
-        get { return Input.GetAxis("Mouse Y") * mouseSensitivity * -1; }
+        get { return (Input.GetAxis("Mouse Y") + staggerView.y) * mouseSensitivity * -1; }
     }
+
+    private Vector2 staggerView = new Vector2();
 
     private void Awake()
     {
+        
         headPosition = headTransform.transform.localPosition;
         camPosition = playerCamera.transform.localPosition;
 
@@ -100,23 +106,43 @@ public class FPSPlayer : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        playerHealth = GetComponent<Health>();
         audio = GetComponent<AudioSource>();
         charController = GetComponent<CharacterController>();
         //headTransform.transform.rotation.SetLookRotation(Vector3.forward, Vector3.up);
         //transform.rotation = Quaternion.identity;
     }
 
-    void FixedUpdate()
-    {
-    }
-
     private void Update()
     {
+        //Debug.Log(Input.GetAxis("Mouse X") + " | " + Input.GetAxis("Mouse Y"));
+        ReduceStagger();
+        UpdateUI();
         MoveCamera();
         MovePlayer();
         ViewBobbing();
         CrouchPlayer();
         //PlaySounds();
+    }
+
+    private void UpdateUI()
+    {
+        //HealthUI
+        float currentHealthRatio = (playerHealth.GetHealth() / playerHealth.maxHealth) * 1f;
+        damageImage.color = Color.Lerp(Color.white, new Color(1, 1, 1, 0), currentHealthRatio);
+    }
+
+    private void ReduceStagger()
+    {
+        staggerView = Vector2.Lerp(staggerView, Vector2.zero, Time.deltaTime * 14);
+    }
+
+    public void Stagger()
+    {
+        float randAngle = Random.Range(0, 360);
+        Vector2 direction = new Vector2(Mathf.Cos(randAngle * Mathf.Deg2Rad), Mathf.Sin(randAngle * Mathf.Deg2Rad));
+
+        staggerView = direction * 8.0f;
     }
 
     private void PlaySounds()
@@ -142,7 +168,7 @@ public class FPSPlayer : MonoBehaviour
                 takenStep = false;
             }
             
-            Debug.Log(bobbingTime + ": " + Mathf.Sin(bobbingTime));
+            //Debug.Log(bobbingTime + ": " + Mathf.Sin(bobbingTime));
 
             float sinv = Mathf.Sin(bobbingTime);
             float sin2 = Mathf.Sin(swivelTime / 2);
