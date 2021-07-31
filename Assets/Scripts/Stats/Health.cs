@@ -8,6 +8,10 @@ public class Health : MonoBehaviour
     public float maxHealth;
     private float currentHealth = 1;
 
+    public Health parentHealth;
+    public bool parentAddHealth;
+    
+
     public UnityEvent deathEvent;
 
     void Start()
@@ -28,6 +32,7 @@ public class Health : MonoBehaviour
     public void SubtractHealth(float minus)
     {
         currentHealth -= minus;
+        parentHealth.SubtractHealth(minus);
     }
 
     public void FullHeal()
