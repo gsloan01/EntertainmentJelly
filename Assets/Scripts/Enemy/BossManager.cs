@@ -9,6 +9,7 @@ public class BossManager : MonoBehaviour
     Animator animator;
 
     bool attackPhase;
+    bool finishedSpawning;
 
     int randomSpawn = 0;
     int lastSpawn = 0;
@@ -16,6 +17,20 @@ public class BossManager : MonoBehaviour
     int ragdollCount = 0;
 
     float timer = 5f;
+    float phaseTimer = 20f;
+
+    public float enemySpawnRate = 3f;
+    public float aoeAttackRate = 4f;
+
+    public enum BossStates
+    {
+        Cooldown,
+        Offense,
+        Dodge,
+        Death
+    }
+
+    public BossStates bStates;
 
     private void Awake()
     {
@@ -26,32 +41,66 @@ public class BossManager : MonoBehaviour
     {
         timer -= Time.deltaTime;
 
-        if (timer <= 0 && enemiesAlive < 2)
+        switch (bStates)
         {
-            SpawnEnemy();
-            timer = 5;
-        }
+            case BossStates.Cooldown:
+                if (timer <= 0 && enemiesAlive < 4)
+                {
+                    SpawnEnemy();
+                    timer = enemySpawnRate;
+                }
 
-        if (timer <= 0 && enemiesAlive >= 2)
-        {
-            attackPhase = true;
-        }
+                if (enemiesAlive == 4)
+                {
+                    finishedSpawning = true;
+                }
 
-        if (attackPhase)
-        {
-            ThrowEnemies();
+                if (enemiesAlive == 0 && finishedSpawning)
+                {
+                    int randomState = Random.Range(0, 2);
+                    if (randomState == 0)
+                    {
+                        bStates = BossStates.Offense;
+                    }
+                    else
+                    {
+                        //bStates = BossStates.Dodge;
+                    }
+                }
+                break;
+            case BossStates.Offense:
+                phaseTimer -= Time.deltaTime;
+                Debug.Log("Offense Phase: " + phaseTimer);
+                if (timer <= 0)
+                {
+                    AOEAttack();
+                    timer = aoeAttackRate;
+                }
 
-            animator.SetBool("Idle", true);
-            animator.SetBool("Attack", false);
-
-            attackPhase = false;
-            timer = 5;
-        }
+                if (phaseTimer <= 0)
+                {
+                    int randomState = Random.Range(0, 2);
+                    if (randomState == 0)
+                    {
+                        bStates = BossStates.Cooldown;
+                    }
+                    else
+                    {
+                        //bStates = BossStates.Dodge;
+                    }
+                }
+                break;
+            case BossStates.Dodge:
+                break;
+            case BossStates.Death:
+                break;
+            default:
+                break;
+        }   
     }
 
     public void SpawnEnemy()
     {
-        //check if cooldown phase
         do
         {
             randomSpawn = Random.Range(0, spawns.Length);
@@ -63,11 +112,10 @@ public class BossManager : MonoBehaviour
         lastSpawn = randomSpawn;
     }
 
-    public void ThrowEnemies()
+    public void AOEAttack()
     {
         animator.SetBool("Attack", true);
         animator.SetBool("Idle", false);
-        //check if attack phase
         Instantiate(projectile, FindObjectOfType<FPSPlayer>().transform.position, FindObjectOfType<FPSPlayer>().transform.rotation);
     }
 }
