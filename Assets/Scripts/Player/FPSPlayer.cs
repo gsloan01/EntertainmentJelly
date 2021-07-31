@@ -11,35 +11,57 @@ public class FPSPlayer : MonoBehaviour
     public float mouseSensitivity = 80.0f;
 
     public float bobbingSpeed = 2f;
+    [Range(0, 1)]
+    public float crouchBobRatio = .5f;
+
     private float normalizedBobbingSpeed
     {
-        get { return (Mathf.PI) / bobbingSpeed; }
+        get { return (Mathf.PI) / (bobbingSpeed / crouchBobMultiplier); }
     }
+
+    private float crouchBobMultiplier
+    {
+        get { return (isCrouching) ? crouchBobRatio : 1f; }
+    }
+
     private float firstStep
     {
         get { return normalizedBobbingSpeed / 4.0f; }
     }
     public float bobbingPeak = .2f;
+    public float swivelPeak = .4f;
     private float bobbingTime = 0;
+    private float swivelTime = 0;
     private bool takenStep = false;
+
+    private bool isCrouching = false;
+    public float crouchingTime = .3f;
 
     private float xRotation;
 
     public GameObject headTransform;
+    public GameObject swivelObject;
     public GameObject playerCamera;
-    private Vector3 startPosition;
+    private Vector3 camPosition;
+    private Vector3 headPosition;
 
     CharacterController charController;
     AudioSource audio;
     public List<AudioClip> steps = new List<AudioClip>();
 
+    private static FPSPlayer instance;
+    public static FPSPlayer Instance
+    {
+        get { return instance; }
+    }
+
     public float Move { 
-        get { return Input.GetAxis("Vertical"); }
+        get { return Input.GetAxisRaw("Vertical"); }
     }
 
     public float Strafe
     {
-        get { return Input.GetAxis("Horizontal"); }
+        get { return Input.GetAxisRaw("Horizontal"); }
     }
 
     public float LookX
@@ -52,6 +74,14 @@ public class FPSPlayer : MonoBehaviour
         get { return Input.GetAxis("Mouse Y") * mouseSensitivity * -1; }
     }
 
+    private void Awake()
+    {
+        headPosition = headTransform.transform.localPosition;
+        camPosition = playerCamera.transform.localPosition;
+
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,20 +90,20 @@ public class FPSPlayer : MonoBehaviour
 
         audio = GetComponent<AudioSource>();
         charController = GetComponent<CharacterController>();
-
-        startPosition = playerCamera.transform.localPosition;
+        //headTransform.transform.rotation.SetLookRotation(Vector3.forward, Vector3.up);
+        //transform.rotation = Quaternion.identity;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        MovePlayer();
-        MoveCamera();
     }
 
     private void Update()
     {
+        MoveCamera();
+        MovePlayer();
         ViewBobbing();
+        CrouchPlayer();
         //PlaySounds();
     }
 
@@ -93,17 +123,23 @@ public class FPSPlayer : MonoBehaviour
         if (Mathf.Abs(Move) > 0.1f || Mathf.Abs(Strafe) > 0.1f)
         {
             bobbingTime += Time.deltaTime * normalizedBobbingSpeed;
+            swivelTime += Time.deltaTime * normalizedBobbingSpeed;
             if (bobbingTime > normalizedBobbingSpeed)
             {
                 bobbingTime -= normalizedBobbingSpeed;
                 takenStep = false;
             }
+            
             //Debug.Log(bobbingTime + ": " + Mathf.Sin(bobbingTime));
 
             float sinv = Mathf.Sin(bobbingTime);
+            float sin2 = Mathf.Sin(swivelTime / 2);
 
             Vector3 bobOffset = new Vector3(0, sinv * bobbingPeak, 0);
-            playerCamera.transform.localPosition = bobOffset + startPosition;
+            playerCamera.transform.localPosition = bobOffset + camPosition;
+
+            Quaternion quat = Quaternion.Euler(0, 0, sin2 * swivelPeak);
+            swivelObject.transform.localRotation = quat;
 
             //Debug.Log(bobbingTime + ": " + firstStep);
             if (!takenStep)
@@ -120,17 +156,36 @@ public class FPSPlayer : MonoBehaviour
             takenStep = false;
             bobbingTime = 0;
 
-            Vector3 slowRest = Vector3.Lerp(playerCamera.transform.localPosition, startPosition, Time.deltaTime);
+            Vector3 slowRest = Vector3.Lerp(playerCamera.transform.localPosition, camPosition, Time.deltaTime * 3);
+            Quaternion slowRot = Quaternion.Lerp(swivelObject.transform.localRotation, Quaternion.identity, Time.deltaTime * 3);
 
             playerCamera.transform.localPosition = slowRest;
+            swivelObject.transform.localRotation = slowRot;
         }
     }
 
+    private void CrouchPlayer()
+    {
+        isCrouching = (Input.GetKey(KeyCode.LeftShift));
+
+        Vector3 slowRest;
+        if (isCrouching)
+        {
+            slowRest = Vector3.Lerp(headTransform.transform.localPosition, (new Vector3(0, -.5f, 0) + headPosition), Time.deltaTime / crouchingTime);
+            headTransform.transform.localPosition = slowRest;
+        } else
+        {
+            slowRest = Vector3.Lerp(headTransform.transform.localPosition, headPosition, Time.deltaTime / crouchingTime);
+            headTransform.transform.localPosition = slowRest;
+        }
+        //Debug.Log("SlowRest: " + slowRest);
+    }
 
     private void MovePlayer()
     {
         Vector3 input = new Vector3(Strafe, 0, Move);
-        Vector3 movement = transform.TransformDirection(input);
+        
+        Vector3 movement = transform.TransformDirection(input).normalized;
 
         movement = movement * speed * Time.deltaTime;
         charController.Move(movement);
@@ -140,10 +195,10 @@ public class FPSPlayer : MonoBehaviour
     {
         //Debug.Log("MouseX: " + LookX + "|MouseY: "+ LookY);
         //Rotate left<->right
-        transform.Rotate(new Vector3(0, LookX, 0) * Time.deltaTime);
+        transform.Rotate(new Vector3(0, Mathf.Clamp(LookX * Time.deltaTime, -5, 5), 0));
 
         //Clamp up and down
-        xRotation += (LookY * Time.deltaTime);
+        xRotation += Mathf.Clamp(LookY * Time.deltaTime, -5, 5);
         xRotation = Mathf.Clamp(xRotation, -90, 90);
 
         headTransform.transform.localRotation = Quaternion.Euler(new Vector3(xRotation, 0, 0));

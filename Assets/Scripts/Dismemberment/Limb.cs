@@ -35,7 +35,7 @@ public class Limb : MonoBehaviour
                 }
             }
 
-            //GetComponent<Health>().Kill();
+            GetComponent<Health>()?.Kill();
             if (wound != null) wound.SetActive(true);
             if (limb != null) Destroy(Instantiate(limb, transform.position, transform.rotation), 5);
             if (bloodSpurt != null) Destroy(Instantiate(bloodSpurt, transform.position, transform.rotation), 5);

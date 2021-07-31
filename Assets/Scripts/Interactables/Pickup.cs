@@ -11,7 +11,8 @@ public class Pickup : MonoBehaviour
         Health,
         Ammo,
         Battery,
-        Gun
+        Gun,
+        Flashlight
     }
 
     public ePickupType type = ePickupType.Ammo;
@@ -20,6 +21,7 @@ public class Pickup : MonoBehaviour
 
     public AudioClip pickupSound;
     public GameObject displayText;
+    public GameObject displayLight;
 
 
     private void Update()
@@ -28,10 +30,12 @@ public class Pickup : MonoBehaviour
         {
             //Turn on highlight and text
             displayText.SetActive(true);
+            displayLight.SetActive(true);
         } else
         {
             //Turn off highlight and text
             displayText.SetActive(false);
+            displayLight.SetActive(false);
         }
     }
 
