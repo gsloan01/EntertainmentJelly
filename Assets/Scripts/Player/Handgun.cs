@@ -107,6 +107,13 @@ public class Handgun : MonoBehaviour
 
             //Remove health from object hit
             hit.collider.GetComponent<Health>()?.SubtractHealth(1);
+
+            //Try to grab EnemyManager
+            EnemyMovement enemyMovement = hit.collider.gameObject.GetComponentInParents<EnemyMovement>();
+            if (enemyMovement)
+            {
+                enemyMovement.currentTarget = FPSPlayer.Instance;
+            }
         }
     }
 
