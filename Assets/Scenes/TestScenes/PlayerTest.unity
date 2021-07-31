@@ -326,6 +326,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7961825539774584023, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
+      propertyPath: bobbingSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -7961825539774584023, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
+      propertyPath: steps.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: aa0c73020a61e0849965476de26c07ef, type: 3}
+    - target: {fileID: -7961825539774584023, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
+      propertyPath: steps.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6198dc8e1f9594a43863006a45fb508b, type: 3}
+    - target: {fileID: -7961825539774584023, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
+      propertyPath: steps.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 06e14814759810748857959125308cee, type: 3}
     - target: {fileID: 1273765395313544, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
       propertyPath: m_Name
       value: Player

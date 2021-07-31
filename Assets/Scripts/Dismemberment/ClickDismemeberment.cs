@@ -21,7 +21,7 @@ public class ClickDismemeberment : MonoBehaviour
                 if (hit.transform.GetComponent<Limb>())
                 {
                     Limb limb = hit.transform.GetComponent<Limb>();
-                    limb?.GetHit();
+                    limb?.Break();
                 }
             }
         }
