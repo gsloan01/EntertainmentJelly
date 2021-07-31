@@ -32,6 +32,8 @@ public class Handgun : MonoBehaviour
     public int clipSize = 8;
     public int ammo = 8;
     private int currentClip = 8;
+    public float fireRate = .3f;
+    private float fireTime;
 
     //Prefabs
     public GameObject hitFX;
@@ -63,8 +65,10 @@ public class Handgun : MonoBehaviour
 
     private void CheckFire()
     {
-        if (Input.GetButtonDown("Fire1") && (currentClip > 0))
+        fireTime += Time.deltaTime;
+        if (Input.GetButtonDown("Fire1") && (currentClip > 0) && fireTime >= fireRate)
         {
+            fireTime = 0;
             currentClip -= 1;
 
             animator.Play("Fire", 0, 0);
@@ -110,17 +114,19 @@ public class Handgun : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R) && (currentClip < clipSize) && (ammo > 0))
         {
-            //Take as much ammo as needed
-            int ammoTaken = Mathf.Min(ammo, (clipSize - currentClip));
-            ammo -= ammoTaken;
-            currentClip += ammoTaken;
-
-            //Play animation
+            //Play animation, animation will call ReloadAmmo()
             animator.Play("Reload Ammo Left", 0, 0);
 
             //Play Sound
             audio.clip = reloadClip;
             audio.Play();
         }
+    }
+
+    public void ReloadAmmo()
+    {
+        int ammoTaken = Mathf.Min(ammo, (clipSize - currentClip));
+        ammo -= ammoTaken;
+        currentClip += ammoTaken;
     }
 }
