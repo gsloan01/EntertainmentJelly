@@ -71,7 +71,7 @@ Transform:
   m_GameObject: {fileID: 3768616001813218823}
   m_LocalRotation: {x: 0.0000018099951, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.15, z: 0.09}
-  m_LocalScale: {x: 103.70598, y: 103.70598, z: 103.70598}
+  m_LocalScale: {x: 200, y: 200, z: 200}
   m_Children:
   - {fileID: 683186676887182054}
   - {fileID: 2600485000907393835}
@@ -101,6 +101,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -125,6 +126,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8434709489814239661
 GameObject:
   m_ObjectHideFlags: 0

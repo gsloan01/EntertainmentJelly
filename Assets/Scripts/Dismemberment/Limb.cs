@@ -7,9 +7,13 @@ public class Limb : MonoBehaviour
     public Limb[] childLimbs;
     public bool destroyable = false;
 
+    public GameObject limb;
+    public GameObject wound;
+    public GameObject bloodSpurt;
+
     void Start()
     {
-        
+        if (wound != null) wound.SetActive(false);
     }
 
     void Update()
@@ -23,16 +27,19 @@ public class Limb : MonoBehaviour
         {
             if (childLimbs.Length > 0)
             {
-                foreach(Limb limb in childLimbs)
+                for(int i = 0; i < childLimbs.Length; i++)
                 {
-                    limb?.GetHit();
+                    if (childLimbs[i] != null) childLimbs[i].GetHit();
                 }
             }
 
+            if (wound != null) wound.SetActive(true);
+            if (limb != null) Instantiate(limb, transform.position, transform.rotation);
+            if (bloodSpurt != null) Instantiate(bloodSpurt, transform.position, transform.rotation);
+
             transform.localScale = Vector3.zero;
-            GetComponent<Collider>().enabled = false;
+            //Debug.Log(name + " is trying to destroy itself");
             Destroy(this);
-            Debug.Log(name + "is trying to destroy itself");
         }
     }
 }

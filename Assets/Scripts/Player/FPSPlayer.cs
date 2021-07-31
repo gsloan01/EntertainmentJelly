@@ -86,7 +86,7 @@ public class FPSPlayer : MonoBehaviour
         if (Mathf.Abs(Move) > 0.1f || Mathf.Abs(Strafe) > 0.1f)
         {
             bobbingTime += Time.deltaTime * bobbingSpeed;
-            Debug.Log(bobbingTime + ": " + Mathf.Sin(bobbingTime));
+            //Debug.Log(bobbingTime + ": " + Mathf.Sin(bobbingTime));
 
             Vector3 bobOffset = new Vector3(0, Mathf.Sin(bobbingTime) * bobbingPeak, 0);
             

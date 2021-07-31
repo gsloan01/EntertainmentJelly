@@ -17,11 +17,11 @@ public class ClickDismemeberment : MonoBehaviour
 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
+                //Debug.Log("Hitting: " + hit.transform.gameObject.name);
                 if (hit.transform.GetComponent<Limb>())
                 {
-                    Debug.Log("Hitting: " + hit.transform.gameObject.name);
                     Limb limb = hit.transform.GetComponent<Limb>();
-                    limb.GetHit();
+                    limb?.GetHit();
                 }
             }
         }
