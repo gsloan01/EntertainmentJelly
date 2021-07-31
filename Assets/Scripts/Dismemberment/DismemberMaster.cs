@@ -42,4 +42,9 @@ public class DismemberMaster : MonoBehaviour
             rb.isKinematic = true;
         }
     }
+
+    public void DeathEvent()
+    {
+        ActivateRagdoll();
+    }
 }
