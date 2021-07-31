@@ -22,6 +22,7 @@ public class Handgun : MonoBehaviour
 
     //Player Camera
     public Camera playerCamera;
+    public float bobbingSpeed = 14f;
 
     //UI elements
     public Text totalAmmoText;
