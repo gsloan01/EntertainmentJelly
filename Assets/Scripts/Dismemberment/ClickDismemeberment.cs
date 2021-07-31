@@ -21,7 +21,7 @@ public class ClickDismemeberment : MonoBehaviour
                 {
                     Debug.Log("Hitting: " + hit.transform.gameObject.name);
                     Limb limb = hit.transform.GetComponent<Limb>();
-                    limb.GetHit();
+                    limb?.GetHit();
                 }
             }
         }
