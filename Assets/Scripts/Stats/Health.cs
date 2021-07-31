@@ -15,8 +15,9 @@ public class Health : MonoBehaviour
     public Health parentHealth;
     public bool parentAddHealth;
 
+
     public bool hasDied = false;
-    
+
 
     public UnityEvent deathEvent;
 

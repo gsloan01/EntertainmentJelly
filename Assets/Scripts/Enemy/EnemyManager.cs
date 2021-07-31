@@ -23,6 +23,8 @@ public class EnemyManager : MonoBehaviour
 
     public float damage = 10;
 
+    
+
     private void Awake()
     {
         enemyMovement = GetComponent<EnemyMovement>();
@@ -34,6 +36,8 @@ public class EnemyManager : MonoBehaviour
         HandleRecoveryTime();
         HandleCurrentAction();
     }
+
+    
 
     private void FixedUpdate()
     {

@@ -135,6 +135,7 @@ public class FPSPlayer : MonoBehaviour
     private void ReduceStagger()
     {
         staggerView = Vector2.Lerp(staggerView, Vector2.zero, Time.deltaTime * 14);
+        
     }
 
     public void Stagger()
