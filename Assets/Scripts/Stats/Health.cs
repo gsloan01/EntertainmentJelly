@@ -56,4 +56,9 @@ public class Health : MonoBehaviour
             hasDied = true;
         }
     }
+
+    public void PlayerDeath()
+    {
+        Debug.Log("Player Killed");
+    }
 }

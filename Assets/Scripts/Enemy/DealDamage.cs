@@ -34,7 +34,7 @@ public class DealDamage : MonoBehaviour
         {
             
             Debug.Log("Dealt Damage");
-            collider.gameObject.GetComponentInParent<Health>()?.SubtractHealth(damage);
+            other.gameObject.GetComponentInParent<Health>()?.SubtractHealth(damage);
             collider.enabled = false;
         }
     }
