@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionAnimation: Zombie Attack
   attackScore: 1
-  recoveryTime: 2
+  recoveryTime: 2.6
   maximumAttackAngle: 50
   minimumAttackAngle: -50
-  minimumDistanceNeeded: 5
-  maximumDistanceNeeded: 7
+  minimumDistanceNeeded: 1.3
+  maximumDistanceNeeded: 1.5

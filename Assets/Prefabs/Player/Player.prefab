@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 82766377412988528}
   m_Layer: 2
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12198,7 +12198,7 @@ MonoBehaviour:
   muzzleLight: {fileID: 108631437318191936}
   shotClip: {fileID: 8300000, guid: 38b450e2adcb6f542acc8c1d423bd8dc, type: 3}
   reloadClip: {fileID: 8300000, guid: b0d51244fd32fc647960320540b32f66, type: 3}
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 20859263501673894}
   bobbingSpeed: 14
   totalAmmoText: {fileID: 114737827360417160}
   currentClipText: {fileID: 114466975427692326}

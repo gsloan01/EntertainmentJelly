@@ -78,13 +78,15 @@ public class FPSPlayer : MonoBehaviour
 
     public float LookX
     {
-        get { return Input.GetAxis("Mouse X") * mouseSensitivity; }
+        get { return (Input.GetAxis("Mouse X") + staggerView.x) * mouseSensitivity; }
     }
 
     public float LookY
     {
-        get { return Input.GetAxis("Mouse Y") * mouseSensitivity * -1; }
+        get { return (Input.GetAxis("Mouse Y") + staggerView.y) * mouseSensitivity * -1; }
     }
+
+    private Vector2 staggerView = new Vector2();
 
     private void Awake()
     {
@@ -106,17 +108,28 @@ public class FPSPlayer : MonoBehaviour
         //transform.rotation = Quaternion.identity;
     }
 
-    void FixedUpdate()
-    {
-    }
-
     private void Update()
     {
+        //Debug.Log(Input.GetAxis("Mouse X") + " | " + Input.GetAxis("Mouse Y"));
+        ReduceStagger();
         MoveCamera();
         MovePlayer();
         ViewBobbing();
         CrouchPlayer();
         //PlaySounds();
+    }
+
+    private void ReduceStagger()
+    {
+        staggerView = Vector2.Lerp(staggerView, Vector2.zero, Time.deltaTime * 15);
+    }
+
+    public void Stagger()
+    {
+        float randAngle = Random.Range(0, 360);
+        Vector2 direction = new Vector2(Mathf.Cos(randAngle * Mathf.Deg2Rad), Mathf.Sin(randAngle * Mathf.Deg2Rad));
+
+        staggerView = direction * 8.0f;
     }
 
     private void PlaySounds()

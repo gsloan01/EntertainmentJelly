@@ -32,29 +32,23 @@ public class EnemyManager : MonoBehaviour
     private void Update()
     {
         HandleRecoveryTime();
+        HandleCurrentAction();
     }
 
     private void FixedUpdate()
     {
-        HandleCurrentAction();
     }
 
     private void HandleCurrentAction()
     {
-        if (enemyMovement.currentTarget != null)
-        {
-            enemyMovement.distanceFromTarget = Vector3.Distance(enemyMovement.currentTarget.transform.position, transform.position);
-        }
-
         if (enemyMovement.currentTarget == null)
         {
             enemyMovement.HandleDetection();
-        }
-        else if(enemyMovement.distanceFromTarget > enemyMovement.stoppingDistance)
+        } else
         {
             enemyMovement.HandleMoveToTarget();
         }
-        else if(enemyMovement.distanceFromTarget <= enemyMovement.stoppingDistance)
+        if(enemyMovement.distanceFromTarget <= enemyMovement.stoppingDistance)
         {
             AttackTarget();
         }
@@ -72,7 +66,6 @@ public class EnemyManager : MonoBehaviour
             if (currentRecoveryTime <= 0)
             {
                 isPerformingAction = false;
-                animator.SetBool("isAttacking", false);
             }
         }
     }
@@ -90,7 +83,7 @@ public class EnemyManager : MonoBehaviour
         else
         {
             isPerformingAction = true;
-            animator.SetBool("isAttacking", true);
+            animator.SetTrigger("isAttacking");
             currentRecoveryTime = currentAttack.recoveryTime;
             //currentAttack = null;
         }

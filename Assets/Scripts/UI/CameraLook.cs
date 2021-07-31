@@ -9,6 +9,11 @@ public class CameraLook : MonoBehaviour
 
     void Update()
     {
+        if (!lookTransform)
+        {
+            lookTransform = Camera.main.transform;
+        }
+
         Vector3 eulers = (transform.position - lookTransform.position).normalized;
 
         transform.rotation = Quaternion.LookRotation(eulers, Vector3.up);

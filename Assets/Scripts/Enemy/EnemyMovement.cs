@@ -67,10 +67,12 @@ public class EnemyMovement : MonoBehaviour
 
     public void HandleMoveToTarget()
     {
-        if (enemyManager.isPerformingAction) return;
+        //if (enemyManager.isPerformingAction) return;
 
         Vector3 targetDirection = currentTarget.transform.position - transform.position;
+        targetDirection.y = 0;
         distanceFromTarget = Vector3.Distance(currentTarget.transform.position, transform.position);
+
         float viewableAngle = Vector3.Angle(targetDirection, transform.forward);
 
         //if we are performing action (attack, etc.) then stop movement
@@ -80,6 +82,7 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
+            Debug.Log(distanceFromTarget + ": " + stoppingDistance);
             if (distanceFromTarget > stoppingDistance)
             {
                 animator.SetFloat("Speed", speed);
@@ -91,25 +94,16 @@ public class EnemyMovement : MonoBehaviour
             }
 
 
-            Debug.Log(distanceFromTarget + " | " + stoppingDistance);
-            if (distanceFromTarget > stoppingDistance)
-            {
-                
-            }
-            else if(distanceFromTarget <= stoppingDistance)
-            {
-                
-            }
-
-            if (distanceFromTarget > detectionRange)
+            /*if (distanceFromTarget > detectionRange)
             {
                 animator.SetFloat("Speed", 0);
                 navMeshAgent.enabled = false;
             }
-            else
+            else if (distanceFromTarget >= stoppingDistance)
             {
+                animator.SetFloat("Speed", speed);
                 navMeshAgent.enabled = true;
-            }
+            }*/
         }
 
         HandleRotateTowardsTarget();
@@ -120,7 +114,21 @@ public class EnemyMovement : MonoBehaviour
 
     private void HandleRotateTowardsTarget()
     {
-        //Rotate Manually
+        Vector3 direction = currentTarget.transform.position - transform.position;
+        direction.y = 0;
+        direction.Normalize();
+
+        if (direction == Vector3.zero)
+        {
+            direction = transform.forward;
+        }
+
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed);
+
+
+
+        /*//Rotate Manually
         if (enemyManager.isPerformingAction)
         {
             Vector3 direction = currentTarget.transform.position - transform.position;
@@ -145,6 +153,6 @@ public class EnemyMovement : MonoBehaviour
             navMeshAgent.SetDestination(currentTarget.transform.position);
             rigidbody.velocity = targetVelocity;
             transform.rotation = Quaternion.Slerp(transform.rotation, navMeshAgent.transform.rotation, rotationSpeed);
-        }
+        }*/
     }
 }

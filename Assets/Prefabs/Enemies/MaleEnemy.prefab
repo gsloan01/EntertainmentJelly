@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7d5631487e6814a9e058068dc307f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftHit: {fileID: 682157904181697729}
+  leftHit: {fileID: 682157904587853026}
   rightHit: {fileID: 682157904181697729}
 --- !u!114 &682157902682024466
 MonoBehaviour:
@@ -283,7 +283,7 @@ MonoBehaviour:
   detectionLayer:
     serializedVersion: 2
     m_Bits: 4
-  speed: 2
+  speed: 0.5
   distanceFromTarget: 20
   stoppingDistance: 2
   detectionRange: 7
