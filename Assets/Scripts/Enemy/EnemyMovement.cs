@@ -87,7 +87,7 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
-            Debug.Log(distanceFromTarget + ": " + stoppingDistance);
+            //Debug.Log(distanceFromTarget + ": " + stoppingDistance);
             if (distanceFromTarget > stoppingDistance)
             {
                 animator.SetFloat("Speed", speed);
