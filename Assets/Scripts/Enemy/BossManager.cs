@@ -5,9 +5,7 @@ using UnityEngine;
 public class BossManager : MonoBehaviour
 {
     public SpawnEnemies[] spawns;
-    public GameObject[] ragdolls;
-    public GameObject spawnThrowable;
-    Rigidbody rigidbody;
+    public GameObject projectile;
     Animator animator;
 
     bool attackPhase;
@@ -34,7 +32,7 @@ public class BossManager : MonoBehaviour
             timer = 5;
         }
 
-        if (timer <= 0 && enemiesAlive >= 2 && ragdollCount < 1)
+        if (timer <= 0 && enemiesAlive >= 2)
         {
             attackPhase = true;
         }
@@ -43,13 +41,11 @@ public class BossManager : MonoBehaviour
         {
             ThrowEnemies();
 
-            if (ragdollCount > 1)
-            {
-                animator.SetBool("Idle", true);
-                animator.SetBool("Attack", false);
+            animator.SetBool("Idle", true);
+            animator.SetBool("Attack", false);
 
-                attackPhase = false;
-            }
+            attackPhase = false;
+            timer = 5;
         }
     }
 
@@ -72,10 +68,6 @@ public class BossManager : MonoBehaviour
         animator.SetBool("Attack", true);
         animator.SetBool("Idle", false);
         //check if attack phase
-        int randomEnemy = Random.Range(0, ragdolls.Length);
-        GameObject temp = Instantiate(ragdolls[randomEnemy], spawnThrowable.transform.position, spawnThrowable.transform.rotation);
-        Vector3 direction = FindObjectOfType<FPSPlayer>().transform.position - spawnThrowable.transform.position;
-        temp.GetComponent<Rigidbody>().AddForce(direction * 100000, ForceMode.Force);
-        ragdollCount++;
+        Instantiate(projectile, FindObjectOfType<FPSPlayer>().transform.position, FindObjectOfType<FPSPlayer>().transform.rotation);
     }
 }
