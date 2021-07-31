@@ -60,7 +60,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.48456374
-        functionName: DamageRight
+        functionName: DamageBoth
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

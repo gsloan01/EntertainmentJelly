@@ -119,45 +119,34 @@ public class EnemyMovement : MonoBehaviour
 
     private void HandleRotateTowardsTarget()
     {
+        
+        
         Vector3 direction = currentTarget.transform.position - transform.position;
         direction.y = 0;
         direction.Normalize();
 
+        float angle = Vector3.Angle(transform.forward, direction);
+
+        angle = angle * Mathf.Sign(direction.x - transform.forward.x) * -1;
+
+        
+
+        animator.SetFloat("Angle", angle);
+
         if (direction == Vector3.zero)
         {
             direction = transform.forward;
+            
         }
-
-        Quaternion targetRotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed);
-
-
-
-        /*//Rotate Manually
-        if (enemyManager.isPerformingAction)
+        if (Mathf.Abs(angle) <= 70.0f)
         {
-            Vector3 direction = currentTarget.transform.position - transform.position;
-            direction.y = 0;
-            direction.Normalize();
-
-            if (direction == Vector3.zero)
-            {
-                direction = transform.forward;
-            }
-
             Quaternion targetRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed);
-        }
-        //Rotate With Navmesh (pathfinding)
-        else
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime);
+        } else
         {
-            Vector3 relativeDirection = transform.InverseTransformDirection(navMeshAgent.desiredVelocity);
-            Vector3 targetVelocity = rigidbody.velocity;
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime / 3);
+        }
 
-            navMeshAgent.enabled = true;
-            navMeshAgent.SetDestination(currentTarget.transform.position);
-            rigidbody.velocity = targetVelocity;
-            transform.rotation = Quaternion.Slerp(transform.rotation, navMeshAgent.transform.rotation, rotationSpeed);
-        }*/
     }
 }

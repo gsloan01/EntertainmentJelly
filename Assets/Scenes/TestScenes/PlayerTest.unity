@@ -226,6 +226,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 682157902682024468, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 682157903451120528, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
       propertyPath: m_Name
       value: MaleEnemy
@@ -274,6 +278,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 682157904181697733, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
+      propertyPath: partnerColliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 682157904181697733, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
+      propertyPath: partnerColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1693469531}
+    - target: {fileID: 682157904587853030, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
+      propertyPath: partnerColliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 682157904587853030, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
+      propertyPath: partnerColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1139044284}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
 --- !u!1 &291553928
@@ -419,6 +439,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1139044284 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 682157904181697734, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
+  m_PrefabInstance: {fileID: 162943791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1682825382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -429,10 +454,6 @@ PrefabInstance:
     - target: {fileID: 1273765395313544, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1986869707440648, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4523690870132846, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
       propertyPath: m_RootOrder
@@ -480,6 +501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
+--- !u!135 &1693469531 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 682157904587853031, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
+  m_PrefabInstance: {fileID: 162943791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2045657665
 GameObject:
   m_ObjectHideFlags: 0

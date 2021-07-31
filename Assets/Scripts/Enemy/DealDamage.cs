@@ -7,6 +7,8 @@ public class DealDamage : MonoBehaviour
     public float damage = 10;
     Collider collider;
 
+    public List<Collider> partnerColliders = new List<Collider>();
+
     void Start()
     {
         collider = GetComponent<SphereCollider>();
@@ -36,6 +38,8 @@ public class DealDamage : MonoBehaviour
             Debug.Log("Dealt Damage");
             other.gameObject.GetComponentInParent<Health>()?.SubtractHealth(damage);
             collider.enabled = false;
+
+            partnerColliders.ForEach(coll => coll.enabled = false);
         }
     }
 
