@@ -23,7 +23,7 @@ public class Limb : MonoBehaviour
         
     }
 
-    public void GetHit()
+    public void Break()
     {
         if (destroyable)
         {
@@ -31,10 +31,11 @@ public class Limb : MonoBehaviour
             {
                 for(int i = 0; i < childLimbs.Length; i++)
                 {
-                    if (childLimbs[i] != null) childLimbs[i].GetHit();
+                    if (childLimbs[i] != null) childLimbs[i].Break();
                 }
             }
 
+            //GetComponent<Health>().Kill();
             if (wound != null) wound.SetActive(true);
             if (limb != null) Destroy(Instantiate(limb, transform.position, transform.rotation), 5);
             if (bloodSpurt != null) Destroy(Instantiate(bloodSpurt, transform.position, transform.rotation), 5);
