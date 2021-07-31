@@ -10,6 +10,8 @@ public class Limb : MonoBehaviour
     public GameObject limb;
     public GameObject wound;
     public GameObject bloodSpurt;
+    public GameObject secondaryEffect;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -34,8 +36,10 @@ public class Limb : MonoBehaviour
             }
 
             if (wound != null) wound.SetActive(true);
-            if (limb != null) Instantiate(limb, transform.position, transform.rotation);
-            if (bloodSpurt != null) Instantiate(bloodSpurt, transform.position, transform.rotation);
+            if (limb != null) Destroy(Instantiate(limb, transform.position, transform.rotation), 5);
+            if (bloodSpurt != null) Destroy(Instantiate(bloodSpurt, transform.position, transform.rotation), 5);
+            if (secondaryEffect != null) Destroy(Instantiate(secondaryEffect, transform.position, transform.rotation), 5);
+            if (audioSource != null) audioSource.Play();
 
             transform.localScale = Vector3.zero;
             //Debug.Log(name + " is trying to destroy itself");
