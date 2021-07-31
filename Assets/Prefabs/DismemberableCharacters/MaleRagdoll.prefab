@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  parentHealth: {fileID: 0}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -148,6 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  parentHealth: {fileID: 6928162430755654363}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -155,18 +159,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Limb, Assembly-CSharp
         m_MethodName: Break
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6928162430755654363}
-        m_TargetAssemblyTypeName: Health, Assembly-CSharp
-        m_MethodName: SubtractHealth
-        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -311,21 +303,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  parentHealth: {fileID: 6928162430755654363}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6928162430755654363}
-        m_TargetAssemblyTypeName: Health, Assembly-CSharp
-        m_MethodName: SubtractHealth
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 10
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!54 &8404306972819942512
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -415,6 +397,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+  parentHealth: {fileID: 0}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -550,6 +534,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+  parentHealth: {fileID: 0}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -704,7 +690,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
+  maxHealth: 10
+  parentHealth: {fileID: 6928162430755654363}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -796,6 +784,36 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4905603796250517820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404306972819909414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  parentHealth: {fileID: 6928162430755654363}
+  parentAddHealth: 0
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8404306972819942503}
+        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8404306972819942503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,34 +834,6 @@ MonoBehaviour:
   bloodSpurt: {fileID: 8345186492862333779, guid: 037679bdb1af78444b7cecc90f413942, type: 3}
   secondaryEffect: {fileID: 0}
   audioSource: {fileID: 0}
---- !u!114 &4905603796250517820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8404306972819909414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 4
-  deathEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8404306972819942503}
-        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
-        m_MethodName: Break
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!54 &8404306972819942465
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -920,6 +910,36 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2439746179039937615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404306972819909436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  parentHealth: {fileID: 6928162430755654363}
+  parentAddHealth: 0
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8404306972819942496}
+        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8404306972819942496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -939,34 +959,6 @@ MonoBehaviour:
   bloodSpurt: {fileID: 6173109535201584932, guid: d7a13cd1668f7884cb443eaa3b641620, type: 3}
   secondaryEffect: {fileID: 0}
   audioSource: {fileID: 0}
---- !u!114 &2439746179039937615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8404306972819909436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 2
-  deathEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8404306972819942496}
-        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
-        m_MethodName: Break
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!54 &8404306972819942475
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1043,6 +1035,36 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &7542900870117126651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404306972819909438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  parentHealth: {fileID: 6928162430755654363}
+  parentAddHealth: 0
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8404306972819942502}
+        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
+        m_MethodName: Break
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8404306972819942502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,34 +1084,6 @@ MonoBehaviour:
   bloodSpurt: {fileID: 6173109535201584932, guid: d7a13cd1668f7884cb443eaa3b641620, type: 3}
   secondaryEffect: {fileID: 0}
   audioSource: {fileID: 0}
---- !u!114 &7542900870117126651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8404306972819909438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 2
-  deathEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8404306972819942502}
-        m_TargetAssemblyTypeName: Limb, Assembly-CSharp
-        m_MethodName: Break
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!82 &878340965625102859
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1290,6 +1284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 4
+  parentHealth: {fileID: 0}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1426,6 +1422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 4
+  parentHealth: {fileID: 0}
+  parentAddHealth: 0
   deathEvent:
     m_PersistentCalls:
       m_Calls:
