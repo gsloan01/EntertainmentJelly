@@ -2538,7 +2538,7 @@ MonoBehaviour:
     m_Bits: 64
   speed: 2
   distanceFromTarget: 20
-  stoppingDistance: 1
+  stoppingDistance: 2
   detectionRange: 7
   rotationSpeed: 75
 --- !u!1 &1473335983
