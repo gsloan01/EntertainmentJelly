@@ -99,7 +99,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EdgeGlow: 1
-    - _EdgeGlowAmount: 2.15
+    - _EdgeGlowAmount: 1.72
     - _Fresnel: 1
     - _Gloss: 0.736
     - _GlossAmt: 0.878
@@ -125,7 +125,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Trans: 0.687
-    - _Transparency: 0.5
+    - _Transparency: 0
     - _UVSec: 0
     - _ZWrite: 1
     - _node_5442: 0.5
