@@ -84,11 +84,21 @@ public class EnemyMovement : MonoBehaviour
             {
                 animator.SetFloat("Speed", speed);
                 navMeshAgent.enabled = true;
-            }
-            else if(distanceFromTarget <= stoppingDistance)
+            } else
             {
                 animator.SetFloat("Speed", 0);
                 navMeshAgent.enabled = false;
+            }
+
+
+            Debug.Log(distanceFromTarget + " | " + stoppingDistance);
+            if (distanceFromTarget > stoppingDistance)
+            {
+                
+            }
+            else if(distanceFromTarget <= stoppingDistance)
+            {
+                
             }
 
             if (distanceFromTarget > detectionRange)
