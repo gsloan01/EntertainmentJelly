@@ -16,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
 
     public float distanceFromTarget;
     public float stoppingDistance = 1f;
+    public float detectionRange = 10f;
 
     public float rotationSpeed = 15f;
 
@@ -86,6 +87,16 @@ public class EnemyMovement : MonoBehaviour
             {
                 animator.SetFloat("Speed", 0);
                 navMeshAgent.enabled = false;
+            }
+
+            if (distanceFromTarget > detectionRange)
+            {
+                animator.SetFloat("Speed", 0);
+                navMeshAgent.enabled = false;
+            }
+            else
+            {
+                navMeshAgent.enabled = true;
             }
         }
 
