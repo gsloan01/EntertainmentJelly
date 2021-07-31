@@ -10,9 +10,18 @@ public class FPSPlayer : MonoBehaviour
     public float speed = 4;
     public float mouseSensitivity = 80.0f;
 
-    public float bobbingSpeed = 1f;
+    public float bobbingSpeed = 2f;
+    private float normalizedBobbingSpeed
+    {
+        get { return (Mathf.PI) / bobbingSpeed; }
+    }
+    private float firstStep
+    {
+        get { return normalizedBobbingSpeed / 4.0f; }
+    }
     public float bobbingPeak = .2f;
     private float bobbingTime = 0;
+    private bool takenStep = false;
 
     private float xRotation;
 
@@ -22,6 +31,7 @@ public class FPSPlayer : MonoBehaviour
 
     CharacterController charController;
     AudioSource audio;
+    public List<AudioClip> steps = new List<AudioClip>();
 
     public float Move { 
         get { return Input.GetAxis("Vertical"); }
@@ -64,7 +74,7 @@ public class FPSPlayer : MonoBehaviour
     private void Update()
     {
         ViewBobbing();
-        PlaySounds();
+        //PlaySounds();
     }
 
     private void PlaySounds()
@@ -80,20 +90,34 @@ public class FPSPlayer : MonoBehaviour
 
     private void ViewBobbing()
     {
-        Debug.Log(startPosition);
-        //Debug.Log(playerCamera.transform.localPosition);
-
         if (Mathf.Abs(Move) > 0.1f || Mathf.Abs(Strafe) > 0.1f)
         {
-            bobbingTime += Time.deltaTime * bobbingSpeed;
+            bobbingTime += Time.deltaTime * normalizedBobbingSpeed;
+            if (bobbingTime > normalizedBobbingSpeed)
+            {
+                bobbingTime -= normalizedBobbingSpeed;
+                takenStep = false;
+            }
             //Debug.Log(bobbingTime + ": " + Mathf.Sin(bobbingTime));
 
-            Vector3 bobOffset = new Vector3(0, Mathf.Sin(bobbingTime) * bobbingPeak, 0);
-            
+            float sinv = Mathf.Sin(bobbingTime);
 
+            Vector3 bobOffset = new Vector3(0, sinv * bobbingPeak, 0);
             playerCamera.transform.localPosition = bobOffset + startPosition;
+
+            Debug.Log(bobbingTime + ": " + firstStep);
+            if (!takenStep)
+            {
+                if (bobbingTime > firstStep)
+                {
+                    audio.clip = steps[Random.Range(0, steps.Count)];
+                    audio.Play();
+                    takenStep = true;
+                }
+            }
         } else
         {
+            takenStep = false;
             bobbingTime = 0;
 
             Vector3 slowRest = Vector3.Lerp(playerCamera.transform.localPosition, startPosition, Time.deltaTime);

@@ -788,10 +788,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   mouseSensitivity: 90
-  bobbingSpeed: 16
+  bobbingSpeed: 0.5
   bobbingPeak: 0.01
   headTransform: {fileID: 1627863436047044}
   playerCamera: {fileID: 1050015137284376}
+  steps:
+  - {fileID: 8300000, guid: fa1cc856dc6f710458d23b867df67439, type: 3}
+  - {fileID: 8300000, guid: aa0c73020a61e0849965476de26c07ef, type: 3}
+  - {fileID: 8300000, guid: 6198dc8e1f9594a43863006a45fb508b, type: 3}
+  - {fileID: 8300000, guid: 06e14814759810748857959125308cee, type: 3}
 --- !u!114 &1682825384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -836,7 +841,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 756dc5569e928634cac29ba117f7e629, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -12265,7 +12270,7 @@ MonoBehaviour:
   currentClipText: {fileID: 114466975427692326}
   clipSize: 8
   ammo: 24
-  hitFX: {fileID: 1271908086133917768, guid: 029659bfadb181241b789577f80a3dbb, type: 3}
+  hitFX: {fileID: 5618948371875314412, guid: 938970e942a7f6d4aab39cdd35cbdff2, type: 3}
 --- !u!82 &82168095860958118
 AudioSource:
   m_ObjectHideFlags: 0
