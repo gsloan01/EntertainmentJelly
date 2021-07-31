@@ -16,6 +16,11 @@ public class Health : MonoBehaviour
 
     public UnityEvent deathEvent;
 
+    public float subEventThreshold = 1f;
+    public UnityEvent subtractEvent;
+
+
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -35,6 +40,11 @@ public class Health : MonoBehaviour
     {
         currentHealth -= minus;
         parentHealth?.SubtractHealth(minus);
+
+        if (minus >= subEventThreshold)
+        {
+            subtractEvent?.Invoke();
+        }
     }
 
     public void FullHeal()
