@@ -51,9 +51,37 @@ public class DismemberMaster : MonoBehaviour
         }
     }
 
+    public void KillRagdoll()
+    {
+        foreach (Rigidbody rb in ragdollrbs)
+        {
+            rb.useGravity = false;
+            rb.isKinematic = true;
+            rb.constraints = RigidbodyConstraints.FreezePosition;
+        }
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+    }
+
     public void DeathEvent()
     {
+        StartCoroutine(RagdollRoutine());
+    }
+
+    public IEnumerator RagdollRoutine()
+    {
         ActivateRagdoll();
+        SwapLayers();
+        yield return new WaitForSeconds(4.0f);
+        KillRagdoll();
+    }
+    
+    private void SwapLayers()
+    {
+        foreach (Rigidbody rb in ragdollrbs)
+        { 
+            rb.gameObject.layer = 7;
+        }
+        gameObject.layer = 7;
     }
 
     void HandleOverrides()
