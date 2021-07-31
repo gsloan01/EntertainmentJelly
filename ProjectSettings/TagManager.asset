@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: [Target, Metal, ExplosiveBarrel, Enemy]
+  tags:
+  - Target
+  - Metal
+  - ExplosiveBarrel
+  - Enemy
   layers:
   - Default
   - TransparentFX
