@@ -7,14 +7,12 @@ public class BossManager : MonoBehaviour
     public SpawnEnemies[] spawns;
     public GameObject projectile;
     Animator animator;
+    List<SpawnEnemies> usedSpawns = new List<SpawnEnemies>();
 
-    bool attackPhase;
     bool finishedSpawning;
 
     int randomSpawn = 0;
-    int lastSpawn = 0;
-    int enemiesAlive = 0;
-    int ragdollCount = 0;
+    int enemiesSpawned = 0;
 
     float timer = 5f;
     float phaseTimer = 20f;
@@ -44,13 +42,16 @@ public class BossManager : MonoBehaviour
         switch (bStates)
         {
             case BossStates.Cooldown:
-                if (timer <= 0 && enemiesAlive < 4)
+                Debug.Log("I am in the cooldown phase");
+                
+                
+                if (timer <= 0 && enemiesSpawned < 4)
                 {
                     SpawnEnemy();
                     timer = enemySpawnRate;
                 }
 
-                if (enemiesAlive == 4)
+                if (enemiesSpawned == 4)
                 {
                     finishedSpawning = true;
                 }
@@ -68,6 +69,8 @@ public class BossManager : MonoBehaviour
 
                 if (allEnemiesDead && finishedSpawning)
                 {
+                    enemiesSpawned = 0;
+                    usedSpawns.Clear();
                     int randomState = Random.Range(0, 2);
                     if (randomState == 0)
                     {
@@ -80,24 +83,31 @@ public class BossManager : MonoBehaviour
                 }
                 break;
             case BossStates.Offense:
+                
                 phaseTimer -= Time.deltaTime;
-                Debug.Log("Offense Phase: " + phaseTimer);
+                Debug.Log("Offense Phase: " + (int)phaseTimer);
                 if (timer <= 0)
                 {
                     AOEAttack();
                     timer = aoeAttackRate;
                 }
-
+                
                 if (phaseTimer <= 0)
                 {
-                    int randomState = Random.Range(0, 2);
-                    if (randomState == 0)
+                    Debug.Log("PhaseTimer is 0");
+                    int randomState2 = Random.Range(0, 1);
+                    if (randomState2 == 0)
                     {
                         bStates = BossStates.Cooldown;
+                        finishedSpawning = false;
+                        timer = enemySpawnRate;
+                        usedSpawns.Clear();
+                        Debug.Log("Should be cooldown");
                     }
                     else
                     {
                         //bStates = BossStates.Dodge;
+                        Debug.Log("Should be dodge");
                     }
                 }
                 break;
@@ -115,12 +125,11 @@ public class BossManager : MonoBehaviour
         do
         {
             randomSpawn = Random.Range(0, spawns.Length);
-        } while (lastSpawn == randomSpawn);
+        } while (usedSpawns.Contains(spawns[randomSpawn]));
 
         spawns[randomSpawn].SpawnEnemy();
-        enemiesAlive++;
-
-        lastSpawn = randomSpawn;
+        usedSpawns.Add(spawns[randomSpawn]);
+        enemiesSpawned++;
     }
 
     public void AOEAttack()
