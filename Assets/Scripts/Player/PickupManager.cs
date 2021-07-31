@@ -39,8 +39,6 @@ public class PickupManager : MonoBehaviour
         Ray ray = playerCamera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         if (Physics.Raycast(ray, out RaycastHit hit)) 
         {
-            Debug.Log(hit.collider.name + ": " + hit.point);
-            Debug.DrawLine(playerCamera.transform.position, hit.point);
             currentPickup = hit.collider.GetComponent<Pickup>();
 
             if (currentPickup) currentPickup.selected = true;
