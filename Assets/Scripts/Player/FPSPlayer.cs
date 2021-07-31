@@ -105,7 +105,7 @@ public class FPSPlayer : MonoBehaviour
             Vector3 bobOffset = new Vector3(0, sinv * bobbingPeak, 0);
             playerCamera.transform.localPosition = bobOffset + startPosition;
 
-            Debug.Log(bobbingTime + ": " + firstStep);
+            //Debug.Log(bobbingTime + ": " + firstStep);
             if (!takenStep)
             {
                 if (bobbingTime > firstStep)
