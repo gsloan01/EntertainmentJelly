@@ -142,7 +142,7 @@ public class FPSPlayer : MonoBehaviour
                 takenStep = false;
             }
             
-            Debug.Log(bobbingTime + ": " + Mathf.Sin(bobbingTime));
+            //Debug.Log(bobbingTime + ": " + Mathf.Sin(bobbingTime));
 
             float sinv = Mathf.Sin(bobbingTime);
             float sin2 = Mathf.Sin(swivelTime / 2);
