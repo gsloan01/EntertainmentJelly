@@ -44,6 +44,8 @@ public class Handgun : MonoBehaviour
         audio = GetComponent<AudioSource>();
     }
 
+    
+
     // Update is called once per frame
     void Update()
     {
@@ -96,7 +98,11 @@ public class Handgun : MonoBehaviour
         
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
+            //Create hitFX
             Instantiate(hitFX, hit.point, Quaternion.identity);
+
+            //Remove health from object hit
+            hit.collider.GetComponent<Health>()?.SubtractHealth(1);
         }
     }
 
