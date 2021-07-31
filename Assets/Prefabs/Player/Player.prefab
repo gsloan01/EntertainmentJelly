@@ -733,9 +733,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4523690870132846}
-  - component: {fileID: 82766377412988528}
+  - component: {fileID: 7580794180679851403}
   - component: {fileID: -7961825539774584023}
+  - component: {fileID: 1682825384}
   - component: {fileID: 5801176956233556098}
+  - component: {fileID: 82766377412988528}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -758,6 +760,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7580794180679851403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273765395313544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d05d67638c37be249a619033baf94ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 20338765399721042}
+  handgunObject: {fileID: 1986869707440648}
+--- !u!114 &-7961825539774584023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273765395313544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2c8ce49488eff41a921837abc3e218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  mouseSensitivity: 90
+  bobbingSpeed: 16
+  bobbingPeak: 0.01
+  headTransform: {fileID: 1627863436047044}
+  playerCamera: {fileID: 1050015137284376}
+--- !u!114 &1682825384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273765395313544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899b452d22153ce4da12da213178cee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!143 &5801176956233556098
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273765395313544}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82766377412988528
 AudioSource:
   m_ObjectHideFlags: 0
@@ -854,42 +922,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-7961825539774584023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273765395313544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f2c8ce49488eff41a921837abc3e218, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  mouseSensitivity: 90
-  bobbingSpeed: 16
-  bobbingPeak: 0.01
-  headTransform: {fileID: 1627863436047044}
-  playerCamera: {fileID: 1050015137284376}
---- !u!143 &5801176956233556098
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273765395313544}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1275845224794000
 GameObject:
   m_ObjectHideFlags: 0
@@ -12233,7 +12265,7 @@ MonoBehaviour:
   currentClipText: {fileID: 114466975427692326}
   clipSize: 8
   ammo: 24
-  hitFX: {fileID: 1581837966267975483, guid: a141a615545c85f4bb471ddb49d8e61c, type: 3}
+  hitFX: {fileID: 1271908086133917768, guid: 029659bfadb181241b789577f80a3dbb, type: 3}
 --- !u!82 &82168095860958118
 AudioSource:
   m_ObjectHideFlags: 0
