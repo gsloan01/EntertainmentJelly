@@ -28,6 +28,17 @@ public class FPSPlayer : MonoBehaviour
     {
         get { return normalizedBobbingSpeed / 4.0f; }
     }
+
+    private float movementSpeed
+    {
+        get { return speed * movementMultiplier; }
+    }
+
+    private float movementMultiplier
+    {
+        get { return (isCrouching) ? crouchSpeedRatio : 1f; }
+    }
+
     public float bobbingPeak = .2f;
     public float swivelPeak = .4f;
     private float bobbingTime = 0;
@@ -36,6 +47,7 @@ public class FPSPlayer : MonoBehaviour
 
     private bool isCrouching = false;
     public float crouchingTime = .3f;
+    public float crouchSpeedRatio = .5f;
 
     private float xRotation;
 
@@ -130,12 +142,13 @@ public class FPSPlayer : MonoBehaviour
                 takenStep = false;
             }
             
-            //Debug.Log(bobbingTime + ": " + Mathf.Sin(bobbingTime));
+            Debug.Log(bobbingTime + ": " + Mathf.Sin(bobbingTime));
 
             float sinv = Mathf.Sin(bobbingTime);
             float sin2 = Mathf.Sin(swivelTime / 2);
 
             Vector3 bobOffset = new Vector3(0, sinv * bobbingPeak, 0);
+            //Debug.Log(bobOffset);
             playerCamera.transform.localPosition = bobOffset + camPosition;
 
             Quaternion quat = Quaternion.Euler(0, 0, sin2 * swivelPeak);
@@ -187,7 +200,7 @@ public class FPSPlayer : MonoBehaviour
         
         Vector3 movement = transform.TransformDirection(input).normalized;
 
-        movement = movement * speed * Time.deltaTime;
+        movement = movement * movementSpeed * Time.deltaTime;
         charController.Move(movement);
     }
 
