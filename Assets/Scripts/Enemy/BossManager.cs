@@ -55,7 +55,18 @@ public class BossManager : MonoBehaviour
                     finishedSpawning = true;
                 }
 
-                if (enemiesAlive == 0 && finishedSpawning)
+                EnemyManager[] enemies = FindObjectsOfType<EnemyManager>();
+                bool allEnemiesDead = true;
+                for (int i = 0; i < enemies.Length; i++)
+                {
+                    if (!enemies[i].gameObject.GetComponentInParent<Health>().hasDied)
+                    {
+                        allEnemiesDead = false;
+                        break;
+                    }
+                }
+
+                if (allEnemiesDead && finishedSpawning)
                 {
                     int randomState = Random.Range(0, 2);
                     if (randomState == 0)
