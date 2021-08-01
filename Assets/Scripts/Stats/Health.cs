@@ -74,7 +74,7 @@ public class Health : MonoBehaviour
     {
         currentRegTime += Time.deltaTime;
 
-        if (currentRegTime > regenTime && hasRegen)
+        if (currentRegTime > regenTime && hasRegen && !hasDied)
         {
             AddHealth(regenAmount);
             currentRegTime = 0;

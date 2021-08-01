@@ -63,7 +63,9 @@ public class FPSPlayer : MonoBehaviour
     private CharacterController charController;
     public AudioSource stepAudio;
     public AudioSource hurtAudio;
+    private Animator animator;
     private Rigidbody rb;
+    
 
     public List<AudioClip> steps = new List<AudioClip>();
     public List<AudioClip> hurtSounds = new List<AudioClip>();
@@ -97,6 +99,7 @@ public class FPSPlayer : MonoBehaviour
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         headPosition = headTransform.transform.localPosition;
         camPosition = playerCamera.transform.localPosition;
 
@@ -108,6 +111,7 @@ public class FPSPlayer : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        animator.enabled = false;
 
         playerHealth = GetComponent<Health>();
         stepAudio = GetComponent<AudioSource>();
@@ -128,6 +132,19 @@ public class FPSPlayer : MonoBehaviour
 
         //rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         //PlaySounds();
+    }
+
+    public void Death()
+    {
+        animator.enabled = true;
+        headTransform.GetComponentInChildren<Handgun>().gameObject.SetActive(false);
+        animator.Play("Death");
+    }
+
+    public void DeathFinished()
+    {
+        MenuController.Instance.OnActivateExtraPage("DeathScreen");     
+        this.enabled = false;
     }
 
     private void UpdateUI()

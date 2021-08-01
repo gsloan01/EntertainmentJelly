@@ -6,6 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    //COMMENT THIS SECTION OUT IF SINGLETON PROBLEMS OCCUR
+    private static SceneController instance;
+    public static SceneController Instance { get { return instance; } }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+    //------------------------------------------------------
+
+
+
     public UnityEvent preloadSceneEvent;
     public UnityEvent postloadSceneEvent;
 

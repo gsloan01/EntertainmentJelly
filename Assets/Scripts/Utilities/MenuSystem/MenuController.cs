@@ -5,13 +5,14 @@ using UnityEngine.Events;
 
 public class MenuController : MonoBehaviour
 {
-    public MenuController Instance { get { return instance; } }
-    MenuController instance;
+    public static MenuController Instance { get { return instance; } }
+    static MenuController instance;
 
     public MenuPage startPage;
     public MenuPage optionsPage;
     public MenuPage creditsPage;
     public MenuPage pausePage;
+    public MenuPage losePage;
 
     public List<MenuPage> extraPages;
 
