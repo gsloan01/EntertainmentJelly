@@ -234,7 +234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8279110833745954664
 RectTransform:
   m_ObjectHideFlags: 0
@@ -376,8 +376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0ad50acf506d14d9b5c7f5a46c91ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  value: 16
+  type: 2
+  value: 1
   selected: 0
   pickupSound: {fileID: 0}
   displayText: {fileID: 8279110832556454479}

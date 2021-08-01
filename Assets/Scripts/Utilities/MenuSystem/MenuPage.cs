@@ -6,6 +6,7 @@ using UnityEngine;
 public class MenuPage : MonoBehaviour
 {
     public GameObject backgroundPanel;
+    public string pageName;
 
     [Serializable]
     public class UIElement

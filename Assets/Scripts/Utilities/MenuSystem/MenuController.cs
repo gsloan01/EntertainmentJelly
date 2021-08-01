@@ -31,6 +31,11 @@ public class MenuController : MonoBehaviour
         OnTitle();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) Pause();
+    }
+
     protected void LockCursor()
     {
         if (lockCursor)
@@ -72,7 +77,11 @@ public class MenuController : MonoBehaviour
 
     public virtual void OnBackToMainMenu(string menuSceneName)
     {
+        Unpause();
+        canPause = false;
         OnTitle();
+        Destroy(FPSPlayer.Instance.gameObject);
+
 
         //Do this last
         SceneController sceneController = FindObjectOfType<SceneController>();
@@ -109,6 +118,16 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    public virtual void OnActivateOptionBack(string activateButton)
+    {
+        optionsPage.GetUIElementByName(activateButton)?.SetActive(true);
+    }
+
+    public virtual void OnDeactivateOptionBack(string deactivateButton)
+    {
+        optionsPage.GetUIElementByName(deactivateButton)?.SetActive(false);
+    }
+
     public virtual void OnCredits()
     {
         UnlockCursor();
@@ -124,39 +143,55 @@ public class MenuController : MonoBehaviour
         }
     }
 
-    public virtual void OnPause()
+
+
+    public  virtual void Pause()
+    {
+        timeScale = Time.timeScale;
+        Time.timeScale = pauseTimeScale;
+        UnlockCursor();
+        OnPauseScreen(true);
+        isPaused = false;
+    }
+
+    public virtual void Unpause()
+    {
+        Time.timeScale = 1;
+        LockCursor();
+        OnPauseScreen(false);
+        isPaused = true;
+    }
+
+    private void OnPause()
     {
         if (canPause)
         {
             if (isPaused)
             {
-                Time.timeScale = timeScale;
-
-                LockCursor();
+                Unpause();
             }
             else
             {
-                timeScale = Time.timeScale;
-                Time.timeScale = pauseTimeScale;
-
-                UnlockCursor();
+                Pause();
             }
 
-            isPaused = !isPaused;
-
-            pausePage?.gameObject.SetActive(isPaused);
-            startPage?.gameObject.SetActive(false);
-            optionsPage?.gameObject.SetActive(false);
-            creditsPage?.gameObject.SetActive(false);
-
-            foreach (MenuPage page in extraPages)
-            {
-                page?.gameObject.SetActive(false);
-            }
         }
     }
 
-    public virtual void OnActivatePage(string pageName)
+    public virtual void OnPauseScreen(bool isPaused)
+    {
+        pausePage?.gameObject.SetActive(isPaused);
+        startPage?.gameObject.SetActive(false);
+        optionsPage?.gameObject.SetActive(false);
+        creditsPage?.gameObject.SetActive(false);
+
+        foreach (MenuPage page in extraPages)
+        {
+            page?.gameObject.SetActive(false);
+        }
+    }
+
+    public virtual void OnActivateExtraPage(string pageName)
     {
         UnlockCursor();
 
@@ -167,7 +202,7 @@ public class MenuController : MonoBehaviour
 
         foreach (MenuPage page in extraPages)
         {
-            if (page.name == pageName) page?.gameObject.SetActive(true);
+            if (page.pageName == pageName) page?.gameObject.SetActive(true);
             else page?.gameObject.SetActive(false);
         }
     }

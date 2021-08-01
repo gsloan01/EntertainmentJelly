@@ -107,7 +107,8 @@ public class PickupManager : MonoBehaviour
 
     private void BatteryPickup()
     {
-
+        flashLightObject.GetComponent<FlashLight>().Charge();
+        EndPickup();
     }
 
     private void GunPickup()
