@@ -8,4 +8,10 @@ public class DontDestroy : MonoBehaviour
     {
         DontDestroyOnLoad(this);   
     }
+
+    public void ResetDontDestroy()
+    {
+        //gameObject.transform.SetParent(GameObject.Find("DontDestroyOnLoad")?.transform);
+        DontDestroyOnLoad(this);
+    }
 }
