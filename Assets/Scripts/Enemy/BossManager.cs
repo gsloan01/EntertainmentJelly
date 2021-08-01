@@ -8,6 +8,10 @@ public class BossManager : MonoBehaviour
     public GameObject projectile;
     public GameObject rotationPoint;
     public GameObject DodgeAttackObject;
+
+    public GameObject dodgeHandEffect;
+    public GameObject AOEHandEffect;
+    public GameObject coolDownHandEffect;
     Animator animator;
     List<SpawnEnemies> usedSpawns = new List<SpawnEnemies>();
     public GameObject attackSpawnPoint;
@@ -48,8 +52,9 @@ public class BossManager : MonoBehaviour
         {
             case BossStates.Cooldown:
                 Debug.Log("I am in the cooldown phase");
-                
-                
+
+                coolDownHandEffect.SetActive(true);
+
                 if (timer <= 0 && enemiesSpawned < 4)
                 {
                     SpawnEnemy();
@@ -76,19 +81,26 @@ public class BossManager : MonoBehaviour
                 {
                     enemiesSpawned = 0;
                     usedSpawns.Clear();
-                    int randomState = Random.Range(1, 2);
+                    int randomState = Random.Range(0, 2);
                     if (randomState == 0)
                     {
                         bStates = BossStates.Offense;
+                        coolDownHandEffect.SetActive(false);
                     }
                     else
                     {
                         bStates = BossStates.Dodge;
+                        coolDownHandEffect.SetActive(false);
                     }
+
+                    phaseTimer = 20;
+                    timer = aoeAttackRate;
                 }
                 break;
             case BossStates.Offense:
-                
+
+                AOEHandEffect.SetActive(true);
+
                 phaseTimer -= Time.deltaTime;
                 Debug.Log("Offense Phase: " + (int)phaseTimer);
                 if (timer <= 0)
@@ -107,15 +119,26 @@ public class BossManager : MonoBehaviour
                         finishedSpawning = false;
                         timer = enemySpawnRate;
                         usedSpawns.Clear();
+
+                        AOEHandEffect.SetActive(false);
                     }
                     else
                     {
                         bStates = BossStates.Dodge;
+
+                        AOEHandEffect.SetActive(false);
                     }
+
+                    phaseTimer = 20;
+                    timer = aoeAttackRate;
                 }
+
                 break;
             case BossStates.Dodge:
-                moveTimer += Time.deltaTime;
+                dodgeHandEffect.SetActive(true);
+
+                phaseTimer -= Time.deltaTime;
+
                 transform.RotateAround(rotationPoint.transform.position, Vector3.up, 10 * Time.deltaTime);
 
                 if (timer <= 0)
@@ -123,7 +146,29 @@ public class BossManager : MonoBehaviour
                     DodgeAttack();
                     timer = aoeAttackRate;
                 }
-                break;
+
+                if (phaseTimer <= 0)
+                {
+                    int randomState3 = Random.Range(0, 2);
+                    if (randomState3 == 0)
+                    {
+                        bStates = BossStates.Cooldown;
+                        finishedSpawning = false;
+                        timer = enemySpawnRate;
+                        usedSpawns.Clear();
+
+                        dodgeHandEffect.SetActive(false);
+                    }
+                    else
+                    {
+                        bStates = BossStates.Offense;
+                        dodgeHandEffect.SetActive(false);
+                    }
+
+                    phaseTimer = 20;
+                    timer = aoeAttackRate;
+                }
+                    break;
             case BossStates.Death:
                 break;
             default:
