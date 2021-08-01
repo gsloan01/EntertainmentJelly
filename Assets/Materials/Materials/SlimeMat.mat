@@ -22,7 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: SlimeMat
   m_Shader: {fileID: -6465566751694194690, guid: 22dda745d095a5b46a665c447ba593eb, type: 3}
-  m_ShaderKeywords: BOOLEAN_CD1BE224_ON
+  m_ShaderKeywords: 
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -81,7 +81,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - BOOLEAN_CD1BE224: 1
+    - BOOLEAN_CD1BE224: 0
     - Vector1_183F19E7: 0.2
     - Vector1_272CFC50: 4.5
     - Vector1_69FDC0E1: 1
