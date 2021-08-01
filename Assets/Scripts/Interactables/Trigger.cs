@@ -8,33 +8,55 @@ using UnityEngine.Events;
 public class Trigger : MonoBehaviour
 {
     public bool active = false;
+    private bool isEnabled = true;
+    public float resetTimer = 6.0f;
+    private float currentResetTimer = 0.0f;
 
     public AudioClip pickupSound;
     public GameObject displayText;
-    public GameObject displayLight;
 
     public UnityEvent interactEvent;
 
     private void Update()
     {
-        if (active && Input.GetKeyDown(KeyCode.E))
+        currentResetTimer += Time.deltaTime;
+
+        if (currentResetTimer > resetTimer)
+        {
+            isEnabled = true;
+        }
+
+        
+        if (active && Input.GetKeyDown(KeyCode.E) && isEnabled)
         {
             interactEvent?.Invoke();
+            currentResetTimer = 0;
+            isEnabled = false;
+            Disable();
         }
+    }
+
+    private void Enable()
+    {
+        if (!isEnabled) return;
+        active = true;
+        displayText?.SetActive(true);
+    }
+
+    private void Disable()
+    {
+        active = false;
+        displayText?.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        active = true;
-        displayText?.SetActive(true);
-        displayLight?.SetActive(true);
+        Enable();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        active = false;
-        displayText?.SetActive(false);
-        displayLight?.SetActive(false);
+        Disable();
     }
 
 }

@@ -109,7 +109,7 @@ public class FPSPlayer : MonoBehaviour
 
         playerHealth = GetComponent<Health>();
         audio = GetComponent<AudioSource>();
-        charController = GetComponent<CharacterController>();
+        //charController = GetComponent<CharacterController>();
         //headTransform.transform.rotation.SetLookRotation(Vector3.forward, Vector3.up);
         //transform.rotation = Quaternion.identity;
     }
@@ -227,9 +227,11 @@ public class FPSPlayer : MonoBehaviour
         Vector3 input = new Vector3(Strafe, 0, Move);
         
         Vector3 movement = transform.TransformDirection(input).normalized;
+        Debug.DrawLine(headTransform.transform.position, movement * 5);
 
         movement = movement * movementSpeed * Time.deltaTime;
-        charController.Move(movement);
+        transform.position += movement;
+        //charController.Move(movement);
     }
 
     private void MoveCamera()
