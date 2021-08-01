@@ -50,10 +50,24 @@ public class MenuController : MonoBehaviour
     {
         canPause = true;
         LockCursor();
+        OnClearPages();
 
         //Do this last
         SceneController sceneController = FindObjectOfType<SceneController>();
         sceneController?.OnLoadScene(startSceneName);
+    }
+
+    public virtual void OnClearPages()
+    {
+        startPage?.gameObject.SetActive(false);
+        optionsPage?.gameObject.SetActive(false);
+        creditsPage?.gameObject.SetActive(false);
+        pausePage?.gameObject.SetActive(false);
+
+        foreach (MenuPage page in extraPages)
+        {
+            page?.gameObject.SetActive(false);
+        }
     }
 
     public virtual void OnBackToMainMenu(string menuSceneName)
