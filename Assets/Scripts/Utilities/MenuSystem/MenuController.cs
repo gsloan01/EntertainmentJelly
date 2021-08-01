@@ -14,6 +14,13 @@ public class MenuController : MonoBehaviour
 
     public List<MenuPage> extraPages;
 
+    public bool lockCursor = false;
+    public bool canPause = false;
+    public float pauseTimeScale;
+
+    bool isPaused = false;
+    float timeScale;
+
     void Start()
     {
         instance = this;
@@ -21,20 +28,44 @@ public class MenuController : MonoBehaviour
         OnTitle();
     }
 
+    protected void LockCursor()
+    {
+        if (lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
+
+    public void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     public virtual void OnStart(string startSceneName)
     {
+        canPause = true;
+        LockCursor();
+
+        //Do this last
         SceneController sceneController = FindObjectOfType<SceneController>();
         sceneController?.OnLoadScene(startSceneName);
     }
 
     public virtual void OnBackToMainMenu(string menuSceneName)
     {
+        OnTitle();
+
+        //Do this last
         SceneController sceneController = FindObjectOfType<SceneController>();
         sceneController?.OnLoadScene(menuSceneName);
     }
 
     public virtual void OnTitle()
     {
+        UnlockCursor();
+
         startPage?.gameObject.SetActive(true);
         optionsPage?.gameObject.SetActive(false);
         creditsPage?.gameObject.SetActive(false);
@@ -48,6 +79,8 @@ public class MenuController : MonoBehaviour
 
     public virtual void OnOptions()
     {
+        UnlockCursor();
+
         optionsPage?.gameObject.SetActive(true);
         startPage?.gameObject.SetActive(false);
         creditsPage?.gameObject.SetActive(false);
@@ -61,6 +94,8 @@ public class MenuController : MonoBehaviour
 
     public virtual void OnCredits()
     {
+        UnlockCursor();
+
         creditsPage?.gameObject.SetActive(true);
         startPage?.gameObject.SetActive(false);
         optionsPage?.gameObject.SetActive(false);
@@ -74,19 +109,40 @@ public class MenuController : MonoBehaviour
 
     public virtual void OnPause()
     {
-        pausePage?.gameObject.SetActive(true);
-        startPage?.gameObject.SetActive(false);
-        optionsPage?.gameObject.SetActive(false);
-        creditsPage?.gameObject.SetActive(false);
-
-        foreach (MenuPage page in extraPages)
+        if (canPause)
         {
-            page?.gameObject.SetActive(false);
+            if (isPaused)
+            {
+                Time.timeScale = timeScale;
+
+                LockCursor();
+            }
+            else
+            {
+                timeScale = Time.timeScale;
+                Time.timeScale = pauseTimeScale;
+
+                UnlockCursor();
+            }
+
+            isPaused = !isPaused;
+
+            pausePage?.gameObject.SetActive(isPaused);
+            startPage?.gameObject.SetActive(false);
+            optionsPage?.gameObject.SetActive(false);
+            creditsPage?.gameObject.SetActive(false);
+
+            foreach (MenuPage page in extraPages)
+            {
+                page?.gameObject.SetActive(false);
+            }
         }
     }
 
     public virtual void OnActivatePage(string pageName)
     {
+        UnlockCursor();
+
         startPage?.gameObject.SetActive(false);
         optionsPage?.gameObject.SetActive(false);
         creditsPage?.gameObject.SetActive(false);
