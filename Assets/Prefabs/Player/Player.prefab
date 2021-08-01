@@ -663,8 +663,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20
   hasRegen: 1
-  regenTime: 2
-  regenAmount: 1
+  regenTime: 0.2
+  regenAmount: 0.05
   parentHealth: {fileID: 0}
   parentAddHealth: 0
   hasDied: 0
@@ -726,7 +726,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 200
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
