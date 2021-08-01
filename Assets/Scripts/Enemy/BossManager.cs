@@ -7,8 +7,10 @@ public class BossManager : MonoBehaviour
     public SpawnEnemies[] spawns;
     public GameObject projectile;
     public GameObject rotationPoint;
+    public GameObject DodgeAttackObject;
     Animator animator;
     List<SpawnEnemies> usedSpawns = new List<SpawnEnemies>();
+    public GameObject attackSpawnPoint;
 
     bool finishedSpawning;
 
@@ -115,6 +117,12 @@ public class BossManager : MonoBehaviour
             case BossStates.Dodge:
                 moveTimer += Time.deltaTime;
                 transform.RotateAround(rotationPoint.transform.position, Vector3.up, 10 * Time.deltaTime);
+
+                if (timer <= 0)
+                {
+                    DodgeAttack();
+                    timer = aoeAttackRate;
+                }
                 break;
             case BossStates.Death:
                 break;
@@ -140,5 +148,14 @@ public class BossManager : MonoBehaviour
         animator.SetBool("Attack", true);
         animator.SetBool("Idle", false);
         Instantiate(projectile, FindObjectOfType<FPSPlayer>().transform.position, FindObjectOfType<FPSPlayer>().transform.rotation);
+    }
+
+    public void DodgeAttack()
+    {
+        animator.SetBool("Attack", true);
+        animator.SetBool("Idle", false);
+        Vector3 direction = FindObjectOfType<FPSPlayer>().transform.position - attackSpawnPoint.transform.position;
+        GameObject temp = Instantiate(DodgeAttackObject, attackSpawnPoint.transform.position, attackSpawnPoint.transform.rotation);
+        temp.GetComponent<Rigidbody>()?.AddForce(direction * 50, ForceMode.Force);
     }
 }
