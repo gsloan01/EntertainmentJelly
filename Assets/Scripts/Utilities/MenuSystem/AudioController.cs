@@ -26,19 +26,24 @@ public class AudioController : MonoBehaviour
 
     public void SetMasterVolume(float level)
     {
-        audioMixer?.SetFloat("MasterVolume", level);
+        //Debug.Log("Master volume level: " + level);
+        audioMixer?.SetFloat("MasterVolume", Mathf.Log(level) * 20);
         PlayerPrefs.SetFloat("MasterVolume", level);
     }
 
     public void SetMusicVolume(float level)
     {
-        audioMixer?.SetFloat("MusicVolume", level);
+
+        //Debug.Log("Music volume level: " + level);
+        audioMixer?.SetFloat("MusicVolume", Mathf.Log(level) * 20);
         PlayerPrefs.SetFloat("MusicVolume", level);
     }
 
     public void SetSFXVolume(float level)
     {
-        audioMixer?.SetFloat("SFXVolume", level);
+
+        //Debug.Log("SFX volume level: " + level);
+        audioMixer?.SetFloat("SFXVolume", Mathf.Log(level) * 20);
         PlayerPrefs.SetFloat("SFXVolume", level);
     }
 }

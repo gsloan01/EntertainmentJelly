@@ -63,6 +63,7 @@ public class FPSPlayer : MonoBehaviour
     private CharacterController charController;
     public AudioSource stepAudio;
     public AudioSource hurtAudio;
+    private Rigidbody rb;
 
     public List<AudioClip> steps = new List<AudioClip>();
     public List<AudioClip> hurtSounds = new List<AudioClip>();
@@ -96,7 +97,6 @@ public class FPSPlayer : MonoBehaviour
 
     private void Awake()
     {
-        
         headPosition = headTransform.transform.localPosition;
         camPosition = playerCamera.transform.localPosition;
 
@@ -125,6 +125,8 @@ public class FPSPlayer : MonoBehaviour
         MovePlayer();
         ViewBobbing();
         CrouchPlayer();
+
+        //rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         //PlaySounds();
     }
 
@@ -244,11 +246,11 @@ public class FPSPlayer : MonoBehaviour
     {
         //Debug.Log("MouseX: " + LookX + "|MouseY: "+ LookY);
         //Rotate left<->right
-        transform.Rotate(new Vector3(0, LookX * Time.deltaTime, 0));
+        transform.Rotate(new Vector3(0, Mathf.Clamp(LookX * Time.deltaTime, -20, 20), 0));
         //Mathf.Clamp(LookX * Time.deltaTime, -10, 10)
 
         //Clamp up and down
-        xRotation += LookY * Time.deltaTime;
+        xRotation += Mathf.Clamp(LookY * Time.deltaTime, -20, 20);
         //Mathf.Clamp(LookY * Time.deltaTime, -10, 10)
         xRotation = Mathf.Clamp(xRotation, -90, 90);
 
