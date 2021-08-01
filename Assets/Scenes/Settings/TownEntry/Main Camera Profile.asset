@@ -16,7 +16,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.269
+    m_Value: 0.78
     min: 0
     max: 1
 --- !u!114 &-2181826703201790196
@@ -38,7 +38,7 @@ MonoBehaviour:
     m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.778
+    m_Value: 0.741
     min: 0
     max: 1
   response:
@@ -65,10 +65,10 @@ MonoBehaviour:
   m_AdvancedMode: 0
   lift:
     m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: 0}
+    m_Value: {x: 1, y: 1, z: 1, w: 0.02317497}
   gamma:
     m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: -0.2497162}
+    m_Value: {x: 1, y: 1, z: 1, w: 0.01622241}
   gain:
     m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0.11350739}
@@ -108,15 +108,15 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 6.35
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.015
+    m_Value: 2.45
     min: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.59
+    m_Value: 0.11
     min: 0
     max: 1
   clamp:
@@ -169,7 +169,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.237
+    m_Value: 0.246
     min: 0
     max: 1
   smoothness:
@@ -199,7 +199,7 @@ MonoBehaviour:
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 25.14
+    m_Value: 15.4
     min: 0
   gaussianEnd:
     m_OverrideState: 1
@@ -265,7 +265,7 @@ MonoBehaviour:
     min: -100
     max: 100
   colorFilter:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
     hdr: 1
     showAlpha: 0
@@ -277,6 +277,6 @@ MonoBehaviour:
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: -28
+    m_Value: -34
     min: -100
     max: 100
