@@ -103,7 +103,6 @@ public class FPSPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
