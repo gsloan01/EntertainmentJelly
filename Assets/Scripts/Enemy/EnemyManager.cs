@@ -3,13 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(AudioSource))]
 public class EnemyManager : MonoBehaviour
 {
     EnemyMovement enemyMovement;
     Animator animator;
 
+
+    public float minBreathRate = 10f;
+    public float maxBreathRate = 14f;
+    private float currentRate = 0;
+    private float breathTimer = 0;
+    public List<AudioClip> breathNoises = new List<AudioClip>();
+    public List<AudioClip> attackNoises = new List<AudioClip>();
+    public AudioSource audio;
+
     public EnemyAttackAction[] enemyAttacks;
     public EnemyAttackAction currentAttack;
+
+
 
     public bool isPerformingAction;
 
@@ -27,17 +39,46 @@ public class EnemyManager : MonoBehaviour
 
     private void Awake()
     {
+        audio = GetComponent<AudioSource>();
         enemyMovement = GetComponent<EnemyMovement>();
         animator = GetComponent<Animator>();
+
+        currentRate = Random.Range(minBreathRate, maxBreathRate);
     }
 
     private void Update()
     {
+        Audio();
         HandleRecoveryTime();
         HandleCurrentAction();
     }
 
-    
+
+    private void Audio()
+    {
+        breathTimer += Time.deltaTime;
+
+        if (breathTimer > currentRate)
+        {
+            breathTimer = 0;
+            currentRate = Random.Range(minBreathRate, maxBreathRate);
+
+            if (!audio.isPlaying)
+            {
+                audio.clip = breathNoises[Random.Range(0, breathNoises.Count)];
+                audio.volume = 0.4f;
+                audio.Play();
+            }
+        }
+    }
+
+    private void PlayAttackAudio()
+    {
+        audio.clip = attackNoises[Random.Range(0, attackNoises.Count)];
+        audio.volume = 0.7f;
+        audio.Play();
+    }
+
 
     private void FixedUpdate()
     {
@@ -59,6 +100,7 @@ public class EnemyManager : MonoBehaviour
         if(enemyMovement.distanceFromTarget <= enemyMovement.stoppingDistance)
         {
             AttackTarget();
+            PlayAttackAudio();
         }
     }
 
