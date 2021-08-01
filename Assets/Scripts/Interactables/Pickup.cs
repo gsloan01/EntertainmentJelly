@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider))]
 public class Pickup : MonoBehaviour
@@ -22,6 +23,13 @@ public class Pickup : MonoBehaviour
     public AudioClip pickupSound;
     public GameObject displayText;
     public GameObject displayLight;
+
+    public UnityEvent pickupEvent;
+
+    public void Invoke()
+    {
+        pickupEvent?.Invoke();
+    }
 
 
     private void Update()

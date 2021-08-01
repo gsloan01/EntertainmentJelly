@@ -78,6 +78,7 @@ public class PickupManager : MonoBehaviour
     {
         audio.clip = currentPickup.pickupSound;
         audio.Play();
+        currentPickup.Invoke();
         Destroy(currentPickup.gameObject);
     }
 
