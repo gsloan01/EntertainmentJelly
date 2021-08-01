@@ -24,7 +24,8 @@ public class AOEAttack : MonoBehaviour
 
         if (timer <= 0 && !objectSpawned)
         {
-            Instantiate(attack, transform.position, transform.rotation);
+            GameObject temp = Instantiate(attack, transform.position, transform.rotation);
+            Destroy(temp, 1f);
             collider.enabled = true;
             objectSpawned = true;
 
