@@ -2906,7 +2906,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 682157902682024471, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
       propertyPath: stoppingDistance
-      value: 1.6
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 682157903451120528, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
       propertyPath: m_Name
@@ -15526,7 +15526,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 682157902682024471, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
       propertyPath: stoppingDistance
-      value: 1.6
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 682157903451120528, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
       propertyPath: m_Name
@@ -18171,10 +18171,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -7961825539774584023, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
-      propertyPath: mouseSensitivity
-      value: 85
-      objectReference: {fileID: 0}
     - target: {fileID: 1273765395313544, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -18189,7 +18185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4523690870132846, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.576
+      value: 0.577
       objectReference: {fileID: 0}
     - target: {fileID: 4523690870132846, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21559,7 +21555,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 682157902682024471, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
       propertyPath: stoppingDistance
-      value: 1.6
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 682157903451120528, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
       propertyPath: m_Name

@@ -5,8 +5,8 @@ using UnityEngine.Audio;
 
 public class AudioController : MonoBehaviour
 {
-    public AudioController Instance { get { return Instance; } }
-    AudioController instance;
+    public static AudioController Instance { get { return Instance; } }
+    static AudioController instance;
 
     public AudioMixer audioMixer;
 
