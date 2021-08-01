@@ -61,8 +61,11 @@ public class FPSPlayer : MonoBehaviour
 
     private Health playerHealth;
     private CharacterController charController;
-    private AudioSource audio;
+    public AudioSource stepAudio;
+    public AudioSource hurtAudio;
+
     public List<AudioClip> steps = new List<AudioClip>();
+    public List<AudioClip> hurtSounds = new List<AudioClip>();
 
     private static FPSPlayer instance;
     public static FPSPlayer Instance
@@ -107,7 +110,7 @@ public class FPSPlayer : MonoBehaviour
         Cursor.visible = false;
 
         playerHealth = GetComponent<Health>();
-        audio = GetComponent<AudioSource>();
+        stepAudio = GetComponent<AudioSource>();
         //charController = GetComponent<CharacterController>();
         //headTransform.transform.rotation.SetLookRotation(Vector3.forward, Vector3.up);
         //transform.rotation = Quaternion.identity;
@@ -144,18 +147,22 @@ public class FPSPlayer : MonoBehaviour
         Vector2 direction = new Vector2(Mathf.Cos(randAngle * Mathf.Deg2Rad), Mathf.Sin(randAngle * Mathf.Deg2Rad));
 
         staggerView = direction * 8.0f;
+        hurtAudio.clip = hurtSounds[Random.Range(0, hurtSounds.Count)];
+        hurtAudio.Play();
     }
 
     private void PlaySounds()
     {
         if (Mathf.Abs(Move) > 0.1f || Mathf.Abs(Strafe) > 0.1f)
         {
-            if (!audio.isPlaying) audio.Play();
+            if (!stepAudio.isPlaying) stepAudio.Play();
         } else
         {
-            if (audio.isPlaying) audio.Stop();
+            if (stepAudio.isPlaying) stepAudio.Stop();
         }
     }
+
+    
 
     private void ViewBobbing()
     {
@@ -186,8 +193,8 @@ public class FPSPlayer : MonoBehaviour
             {
                 if (bobbingTime > firstStep)
                 {
-                    audio.clip = steps[Random.Range(0, steps.Count)];
-                    audio.Play();
+                    stepAudio.clip = steps[Random.Range(0, steps.Count)];
+                    stepAudio.Play();
                     takenStep = true;
                 }
             }
