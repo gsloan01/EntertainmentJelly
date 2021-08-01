@@ -476,6 +476,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
+--- !u!1001 &1817204895
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8279110832556454479, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577240, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577240, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577241, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_Name
+      value: BatteryPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577242, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577242, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.851
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577242, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577242, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2818167
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577242, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577242, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577242, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577242, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577242, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577242, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279110834287577242, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 48bc8ae96c907bb4b92f3f05116ba648, type: 3}
 --- !u!1 &2045657665
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +609,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1294659381787585049
 PrefabInstance:
@@ -665,6 +734,22 @@ PrefabInstance:
     - target: {fileID: 2598357592347449787, guid: 0265fe50068ded547858c6896eadae34, type: 3}
       propertyPath: lookTransform
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329633348797769375, guid: 0265fe50068ded547858c6896eadae34, type: 3}
+      propertyPath: pickupEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329633348797769375, guid: 0265fe50068ded547858c6896eadae34, type: 3}
+      propertyPath: pickupEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329633348797769375, guid: 0265fe50068ded547858c6896eadae34, type: 3}
+      propertyPath: pickupEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9098062477175707805, guid: b89b2345c9fa48c42b9c485d35fab0ef, type: 3}
+    - target: {fileID: 6329633348797769375, guid: 0265fe50068ded547858c6896eadae34, type: 3}
+      propertyPath: pickupEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0265fe50068ded547858c6896eadae34, type: 3}

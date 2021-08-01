@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Light))]
 [RequireComponent(typeof(AudioSource))]
@@ -32,7 +33,7 @@ public class FlashLight : MonoBehaviour
     public AudioClip onSound;
     public AudioClip offSound;
 
-
+    public Slider batterySlider;
 
     // Start is called before the first frame update
     void Start()
@@ -43,53 +44,68 @@ public class FlashLight : MonoBehaviour
         currentRate = Random.Range(flickerMinRate, flickerMaxRate);
         currentAmount = Random.Range(1, maxFlickerAmount + 1);
 
-        currentBattery = MaxLifetimeInSeconds;
+        Charge();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F) && currentBattery > 0) Toggle();
+        batterySlider.value = (currentBattery / MaxLifetimeInSeconds);
 
         if (lightOn)
         {
             HandleFlicker();
             currentBattery -= Time.deltaTime;
+            
 
             if (currentBattery <= 0)
             {
-                TurnOff();
+                TurnOff(false);
             }
         }
+    }
+
+    public void Charge()
+    {
+        currentBattery = MaxLifetimeInSeconds;
     }
 
     private void Toggle()
     {
         if (lightOn)
         {
-            TurnOff();
+            TurnOff(true);
         } else
         {
-            TurnOn();
+            TurnOn(true);
         }
     }
 
-    private void TurnOff()
+    private void TurnOff(bool useAudio)
     {
         light.intensity = 0;
         lightOn = false;
 
-        audio.clip = offSound;
-        audio.Play();
+
+        if (useAudio)
+        {
+            audio.clip = offSound;
+            audio.Play();
+        }
     }
 
-    private void TurnOn()
+    private void TurnOn(bool useAudio)
     {
         light.intensity = baseIntensity;
         lightOn = true;
 
-        audio.clip = onSound;
-        audio.Play();
+        if (useAudio)
+        {
+            audio.clip = onSound;
+            audio.Play();
+        }
+        
     }
 
     private void HandleFlicker()
@@ -111,13 +127,13 @@ public class FlashLight : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            light.intensity = 0;
+            TurnOff(false);
             yield return new WaitForSeconds(0.02f);
             light.intensity = baseIntensity / 2;
             yield return new WaitForSeconds(0.06f);
-            light.intensity = 0;
+            TurnOff(false);
             yield return new WaitForSeconds(0.03f);
-            light.intensity = baseIntensity;
+            TurnOn(false);
         }
     }
 }
