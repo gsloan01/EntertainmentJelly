@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MenuController : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class MenuController : MonoBehaviour
     public bool lockCursor = false;
     public bool canPause = false;
     public float pauseTimeScale;
+
+    public UnityEvent quitEvent;
 
     bool isPaused = false;
     float timeScale;
@@ -153,5 +156,11 @@ public class MenuController : MonoBehaviour
             if (page.name == pageName) page?.gameObject.SetActive(true);
             else page?.gameObject.SetActive(false);
         }
+    }
+
+    public virtual void OnQuit()
+    {
+        quitEvent?.Invoke();
+        Application.Quit();
     }
 }
