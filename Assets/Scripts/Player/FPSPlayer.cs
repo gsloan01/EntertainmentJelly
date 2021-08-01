@@ -103,6 +103,7 @@ public class FPSPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -135,6 +136,7 @@ public class FPSPlayer : MonoBehaviour
     private void ReduceStagger()
     {
         staggerView = Vector2.Lerp(staggerView, Vector2.zero, Time.deltaTime * 14);
+        
     }
 
     public void Stagger()
