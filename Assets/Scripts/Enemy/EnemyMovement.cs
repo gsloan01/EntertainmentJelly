@@ -57,6 +57,14 @@ public class EnemyMovement : MonoBehaviour
                 //Gets angle from front of player and targetDirection
                 float viewableAngle = Vector3.Angle(targetDirection, transform.forward);
 
+                //Checks if ray can hit (not obstructed)
+                if (Physics.Raycast(transform.position, targetDirection, out RaycastHit hit))
+                {
+                    float hitDistance = (hit.point - transform.position).magnitude;
+
+                    if (hitDistance < targetDirection.magnitude) return;
+                }
+
                 //checks if angle is in range of min and max detection range
                 if (viewableAngle > enemyManager.minimumDetectionAngle && viewableAngle < enemyManager.maximumDetectionAngle)
                 {
