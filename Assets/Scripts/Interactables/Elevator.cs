@@ -77,6 +77,7 @@ public class Elevator : MonoBehaviour
         if (player)
         {
             player.transform.SetParent(null);
+            if (player.GetComponent<DontDestroy>()) player.GetComponent<DontDestroy>().ResetDontDestroy();
             //Debug.Log("Removed player as child");
         }
     }

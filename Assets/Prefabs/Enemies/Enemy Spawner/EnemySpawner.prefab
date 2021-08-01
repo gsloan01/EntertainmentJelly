@@ -45,4 +45,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnableEnemies:
   - {fileID: 682157903451120528, guid: 4b30ee3a2cd4a88469c0f57b16986cf8, type: 3}
-  - {fileID: 3021893170487088965, guid: 3e276d4eeb5e607448d5b9958e10a4ec, type: 3}
