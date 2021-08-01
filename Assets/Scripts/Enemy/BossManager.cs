@@ -16,6 +16,8 @@ public class BossManager : MonoBehaviour
     List<SpawnEnemies> usedSpawns = new List<SpawnEnemies>();
     public GameObject attackSpawnPoint;
 
+    public Healthbar healthbar;
+
     bool finishedSpawning;
 
     int randomSpawn = 0;
@@ -28,6 +30,8 @@ public class BossManager : MonoBehaviour
 
     public float enemySpawnRate = 3f;
     public float aoeAttackRate = 4f;
+
+    public Health health;
 
     public enum BossStates
     {
@@ -44,14 +48,27 @@ public class BossManager : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
 
+    private void Start()
+    {
+
+    }
+
     public void Update()
     {
+        healthbar.SetHealth(health.GetHealth(), health.maxHealth);
+
         timer -= Time.deltaTime;
+
+        if (health.hasDied && bStates != BossStates.Death)
+        {
+            //bStates = BossStates.Death;
+            Destroy(gameObject, 3);
+        }
 
         switch (bStates)
         {
             case BossStates.Cooldown:
-                Debug.Log("I am in the cooldown phase");
+                //Debug.Log("I am in the cooldown phase");
 
                 coolDownHandEffect.SetActive(true);
 
@@ -170,6 +187,7 @@ public class BossManager : MonoBehaviour
                 }
                     break;
             case BossStates.Death:
+
                 break;
             default:
                 break;
