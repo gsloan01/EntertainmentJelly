@@ -43,6 +43,12 @@ public class BossManager : MonoBehaviour
 
     public BossStates bStates;
 
+    public void FinishGame()
+    {
+        MenuController.Instance.OnActivateExtraPage("ThankYouScreen");
+        FPSPlayer.Instance.enabled = false;
+    }
+
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
