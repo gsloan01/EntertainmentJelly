@@ -143,7 +143,7 @@ public class FPSPlayer : MonoBehaviour
 
     public void DeathFinished()
     {
-        MenuController.Instance.OnActivateExtraPage("ThankYouScreen");
+        MenuController.Instance.OnActivateExtraPage("DeathScreen");     
         this.enabled = false;
     }
 
