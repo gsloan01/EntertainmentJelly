@@ -6503,7 +6503,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "you know \nwho else is \nscared?"
+  m_text: corrupted
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ccb3f6356f9dae8409b33060186d0b1b, type: 2}
   m_sharedMaterial: {fileID: -2178323434452651486, guid: ccb3f6356f9dae8409b33060186d0b1b, type: 2}
@@ -6530,8 +6530,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1.1
-  m_fontSizeBase: 1.1
+  m_fontSize: 0.85
+  m_fontSizeBase: 0.85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
