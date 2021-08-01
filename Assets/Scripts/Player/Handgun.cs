@@ -66,7 +66,7 @@ public class Handgun : MonoBehaviour
     private void CheckFire()
     {
         fireTime += Time.deltaTime;
-        if (Input.GetButtonDown("Fire1") && (currentClip > 0) && fireTime >= fireRate)
+        if (Input.GetButtonDown("Fire1") && (currentClip > 0) && fireTime >= fireRate && Time.timeScale >= 1)
         {
             fireTime = 0;
             currentClip -= 1;
