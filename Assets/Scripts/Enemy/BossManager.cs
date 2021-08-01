@@ -7,8 +7,14 @@ public class BossManager : MonoBehaviour
     public SpawnEnemies[] spawns;
     public GameObject projectile;
     public GameObject rotationPoint;
+    public GameObject DodgeAttackObject;
+
+    public GameObject dodgeHandEffect;
+    public GameObject AOEHandEffect;
+    public GameObject coolDownHandEffect;
     Animator animator;
     List<SpawnEnemies> usedSpawns = new List<SpawnEnemies>();
+    public GameObject attackSpawnPoint;
 
     bool finishedSpawning;
 
@@ -46,8 +52,9 @@ public class BossManager : MonoBehaviour
         {
             case BossStates.Cooldown:
                 Debug.Log("I am in the cooldown phase");
-                
-                
+
+                coolDownHandEffect.SetActive(true);
+
                 if (timer <= 0 && enemiesSpawned < 4)
                 {
                     SpawnEnemy();
@@ -74,19 +81,26 @@ public class BossManager : MonoBehaviour
                 {
                     enemiesSpawned = 0;
                     usedSpawns.Clear();
-                    int randomState = Random.Range(1, 2);
+                    int randomState = Random.Range(0, 2);
                     if (randomState == 0)
                     {
                         bStates = BossStates.Offense;
+                        coolDownHandEffect.SetActive(false);
                     }
                     else
                     {
                         bStates = BossStates.Dodge;
+                        coolDownHandEffect.SetActive(false);
                     }
+
+                    phaseTimer = 20;
+                    timer = aoeAttackRate;
                 }
                 break;
             case BossStates.Offense:
-                
+
+                AOEHandEffect.SetActive(true);
+
                 phaseTimer -= Time.deltaTime;
                 Debug.Log("Offense Phase: " + (int)phaseTimer);
                 if (timer <= 0)
@@ -105,17 +119,56 @@ public class BossManager : MonoBehaviour
                         finishedSpawning = false;
                         timer = enemySpawnRate;
                         usedSpawns.Clear();
+
+                        AOEHandEffect.SetActive(false);
                     }
                     else
                     {
                         bStates = BossStates.Dodge;
+
+                        AOEHandEffect.SetActive(false);
                     }
+
+                    phaseTimer = 20;
+                    timer = aoeAttackRate;
                 }
+
                 break;
             case BossStates.Dodge:
-                moveTimer += Time.deltaTime;
+                dodgeHandEffect.SetActive(true);
+
+                phaseTimer -= Time.deltaTime;
+
                 transform.RotateAround(rotationPoint.transform.position, Vector3.up, 10 * Time.deltaTime);
-                break;
+
+                if (timer <= 0)
+                {
+                    DodgeAttack();
+                    timer = aoeAttackRate;
+                }
+
+                if (phaseTimer <= 0)
+                {
+                    int randomState3 = Random.Range(0, 2);
+                    if (randomState3 == 0)
+                    {
+                        bStates = BossStates.Cooldown;
+                        finishedSpawning = false;
+                        timer = enemySpawnRate;
+                        usedSpawns.Clear();
+
+                        dodgeHandEffect.SetActive(false);
+                    }
+                    else
+                    {
+                        bStates = BossStates.Offense;
+                        dodgeHandEffect.SetActive(false);
+                    }
+
+                    phaseTimer = 20;
+                    timer = aoeAttackRate;
+                }
+                    break;
             case BossStates.Death:
                 break;
             default:
@@ -140,5 +193,14 @@ public class BossManager : MonoBehaviour
         animator.SetBool("Attack", true);
         animator.SetBool("Idle", false);
         Instantiate(projectile, FindObjectOfType<FPSPlayer>().transform.position, FindObjectOfType<FPSPlayer>().transform.rotation);
+    }
+
+    public void DodgeAttack()
+    {
+        animator.SetBool("Attack", true);
+        animator.SetBool("Idle", false);
+        Vector3 direction = FindObjectOfType<FPSPlayer>().transform.position - attackSpawnPoint.transform.position;
+        GameObject temp = Instantiate(DodgeAttackObject, attackSpawnPoint.transform.position, attackSpawnPoint.transform.rotation);
+        temp.GetComponent<Rigidbody>()?.AddForce(direction * 50, ForceMode.Force);
     }
 }
