@@ -2492,6 +2492,102 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneController
       objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: preloadSceneEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: preloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: preloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4193486837039798924}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 914109184}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 914109184}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: preloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: preloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPauseScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Log
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Log
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: preloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SceneController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: preloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Should unpause
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Should unpause
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: preloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+      propertyPath: postloadSceneEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4684427027958772923, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3888,6 +3984,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4684427027958772923, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
   m_PrefabInstance: {fileID: 506924246}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &914109184 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4684427027958772922, guid: 94a684f71f729ae47b324a974d8b14e3, type: 3}
+  m_PrefabInstance: {fileID: 506924246}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388eabf2a8c6c80408c5da63f376b364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &922884129
 GameObject:
   m_ObjectHideFlags: 0
@@ -6396,7 +6503,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "you know \nwho else is \nscared?"
+  m_text: corrupted
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ccb3f6356f9dae8409b33060186d0b1b, type: 2}
   m_sharedMaterial: {fileID: -2178323434452651486, guid: ccb3f6356f9dae8409b33060186d0b1b, type: 2}
@@ -6423,8 +6530,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1.1
-  m_fontSizeBase: 1.1
+  m_fontSize: 0.85
+  m_fontSizeBase: 0.85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
