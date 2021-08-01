@@ -244,10 +244,12 @@ public class FPSPlayer : MonoBehaviour
     {
         //Debug.Log("MouseX: " + LookX + "|MouseY: "+ LookY);
         //Rotate left<->right
-        transform.Rotate(new Vector3(0, Mathf.Clamp(LookX * Time.deltaTime, -5, 5), 0));
+        transform.Rotate(new Vector3(0, LookX * Time.deltaTime, 0));
+        //Mathf.Clamp(LookX * Time.deltaTime, -10, 10)
 
         //Clamp up and down
-        xRotation += Mathf.Clamp(LookY * Time.deltaTime, -5, 5);
+        xRotation += LookY * Time.deltaTime;
+        //Mathf.Clamp(LookY * Time.deltaTime, -10, 10)
         xRotation = Mathf.Clamp(xRotation, -90, 90);
 
         headTransform.transform.localRotation = Quaternion.Euler(new Vector3(xRotation, 0, 0));
