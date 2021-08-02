@@ -10,6 +10,6 @@ public class SpawnEnemies : MonoBehaviour
     {
         int randomEnemy = Random.Range(0, spawnableEnemies.Length);
         GameObject enemy = Instantiate(spawnableEnemies[randomEnemy], transform.position, transform.rotation);
-        enemy.GetComponent<EnemyMovement>().currentTarget = FPSPlayer.Instance;
+        enemy.GetComponentInChildren<EnemyMovement>().currentTarget = FPSPlayer.Instance;
     }
 }
