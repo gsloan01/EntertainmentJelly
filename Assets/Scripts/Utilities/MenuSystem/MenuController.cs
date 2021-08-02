@@ -25,10 +25,13 @@ public class MenuController : MonoBehaviour
     bool isPaused = false;
     float timeScale;
 
-    void Start()
+    void Awake()
     {
         instance = this;
+    }
 
+    void Start()
+    {
         OnTitle();
     }
 
