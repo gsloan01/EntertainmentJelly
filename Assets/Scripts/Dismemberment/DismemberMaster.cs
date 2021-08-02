@@ -37,11 +37,7 @@ public class DismemberMaster : MonoBehaviour
     {
         foreach (Limb limb in deadDestructibleLimbs)
         {
-            limb.destroyable = true;
-        }
-
-        foreach (Limb limb in limbs)
-        {
+            if (limb) limb.destroyable = true;
             limb.GetComponent<Health>().SetHealth(1);
         }
     }
