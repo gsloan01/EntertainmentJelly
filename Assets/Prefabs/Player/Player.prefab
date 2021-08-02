@@ -13323,7 +13323,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 15
+  m_Intensity: 25
   m_Range: 35
   m_SpotAngle: 45
   m_InnerSpotAngle: 2
@@ -13389,7 +13389,7 @@ MonoBehaviour:
   flickerMinRate: 10
   maxFlickerAmount: 4
   batteryLifetime: 2
-  baseIntensity: 15
+  baseIntensity: 25
   onSound: {fileID: 8300000, guid: 5389da3e26e041c45b39391ead9dcf37, type: 3}
   offSound: {fileID: 8300000, guid: ca5503ecddd7deb4c8de529975dcb969, type: 3}
   batterySlider: {fileID: 8138761908120384484}
