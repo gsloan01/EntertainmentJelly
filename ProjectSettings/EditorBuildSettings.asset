@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu/MainMenu.unity
+    guid: 5de6aceebb7a47343bd5426638089778
+  - enabled: 1
+    path: Assets/Scenes/Environment/TownEntry.unity
+    guid: e1c3620f472b61646b4d9db8353d3214
+  - enabled: 1
+    path: Assets/Scenes/Environment/PoliceStationInterior.unity
+    guid: 45da0a34b0c13fa4e82190b39405a42b
+  - enabled: 1
+    path: Assets/Scenes/Environment/Streetss.unity
+    guid: 35c268a203ff5e74ea60e6a72f5e9e68
+  - enabled: 1
+    path: Assets/Scenes/Environment/BossArena.unity
+    guid: 323a6d6c653bebe4db86d5b462927e36
   m_configObjects: {}
