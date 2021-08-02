@@ -8,6 +8,8 @@ public class DismemberMaster : MonoBehaviour
     public GameObject secondaryEffectOverride;
     public AudioSource audioSourceOverride;
 
+    public List<Limb> deadDestructibleLimbs = new List<Limb>();
+
     Animator animator;
 
     List<Rigidbody> ragdollrbs;
@@ -29,6 +31,19 @@ public class DismemberMaster : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void MakeLimbsDestructible()
+    {
+        foreach (Limb limb in deadDestructibleLimbs)
+        {
+            limb.destroyable = true;
+        }
+
+        foreach (Limb limb in limbs)
+        {
+            limb.GetComponent<Health>().SetHealth(1);
+        }
     }
 
     public void ActivateRagdoll()
