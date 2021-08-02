@@ -15,6 +15,7 @@ public class BossManager : MonoBehaviour
     Animator animator;
     List<SpawnEnemies> usedSpawns = new List<SpawnEnemies>();
     public GameObject attackSpawnPoint;
+    public GameObject barrier;
 
     public Healthbar healthbar;
 
@@ -75,7 +76,7 @@ public class BossManager : MonoBehaviour
         {
             case BossStates.Cooldown:
                 //Debug.Log("I am in the cooldown phase");
-
+                barrier.SetActive(true);
                 coolDownHandEffect.SetActive(true);
 
                 if (timer <= 0 && enemiesSpawned < 4)
@@ -121,7 +122,7 @@ public class BossManager : MonoBehaviour
                 }
                 break;
             case BossStates.Offense:
-
+                barrier.SetActive(false);
                 AOEHandEffect.SetActive(true);
 
                 phaseTimer -= Time.deltaTime;
@@ -158,6 +159,7 @@ public class BossManager : MonoBehaviour
 
                 break;
             case BossStates.Dodge:
+                barrier.SetActive(false);
                 dodgeHandEffect.SetActive(true);
 
                 phaseTimer -= Time.deltaTime;
@@ -225,6 +227,6 @@ public class BossManager : MonoBehaviour
         animator.SetBool("Idle", false);
         Vector3 direction = FindObjectOfType<FPSPlayer>().transform.position - attackSpawnPoint.transform.position;
         GameObject temp = Instantiate(DodgeAttackObject, attackSpawnPoint.transform.position, attackSpawnPoint.transform.rotation);
-        temp.GetComponent<Rigidbody>()?.AddForce(direction * 50, ForceMode.Force);
+        temp.GetComponent<Rigidbody>()?.AddForce(direction * 25, ForceMode.Force);
     }
 }
